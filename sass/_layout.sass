@@ -1,0 +1,219 @@
+#top-menu
+  // Reset Redmine stuff
+  background: none
+  font-size: inherit
+  height: auto
+  overflow: hidden
+  padding: 0
+  position: relative
+  a
+    font-weight: normal
+    margin-right: inherit
+  #account, #loggedas
+    position: absolute
+    right: 0
+    text-align: center
+    width: 180px
+  #account
+    bottom: 0
+    ul
+      background: none
+      +box-shadow(none)
+      margin-left: auto
+      margin-right: auto
+      width: 100%
+      li
+        width: 50%
+      a
+        border: none
+        color: $link_color
+        display: block
+        padding: 0
+        text-shadow: none
+  #loggedas
+    border-bottom: 1px solid $separator_color
+    color: $text_color
+    float: right
+    margin-right: inherit
+    a
+      color: $link_color
+  ul
+    +navigation_list
+    +box-shadow(rgba(0,0,0,0.2) 1px 1px 4px)
+    background: #666666
+    // TODO: Webkit
+    background: #666666 -moz-linear-gradient(top, #777777, #444444)
+    +border-radius($outside_border_radius)
+    float: left
+    a
+      border-left: 1px solid rgba(200,200,200,0.3)
+      border-top: 1px solid rgba(200,200,200,0.3)
+      border-right: 1px solid rgba(0,0,0,0.3)
+      border-bottom: 1px solid rgba(0,0,0,0.3)
+      color: #ffffff
+      text-decoration: none
+      text-shadow: rgba(0,0,0,0.5) 1px 1px 1px
+      &:hover
+        text-decoration: underline
+
+
+#header
+  background: none
+  color: $text_color
+  height: auto
+  margin: $spacing*2 0 0 0
+  padding: 0
+  h1
+    text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.9)
+    margin: 0 $spacing
+  #main-menu
+    float: left
+    position: relative
+    margin-right: auto
+    left: 0
+    ul
+      +navigation_list
+      margin-left: 0
+      li
+        margin-right: 1px
+      a
+        background: none // Override Redmine default
+        +border-radius(1em)
+        color: #333333
+        font-weight: normal
+        &:hover, &:active
+          color: $link_color
+        &.selected
+          font-weight: bold // Override Redmine default
+  #quick-search
+    float: right
+    width: 385px
+    form
+      float: left
+    a
+      color: $text_color
+      text-decoration: none
+    form
+      display: block
+    input
+      +border-radius(1em)
+      border-top: 1px solid #848484
+      border-right: 1px solid #c1c1c1
+      border-bottom: 1px solid #e1e1e1
+      border-left: 1px solid #c1c1c1
+      +box-shadow(inset rgba(0,0,0,0.2) 1px 1px 2px)
+      padding: 0.2em 1em
+    select
+      // The Jump to project dropdown
+      float: right
+      width: $jump_to_project_width
+
+#main
+  +box-shadow(rgba(0,0,0,0.2) 1px 1px 4px)
+  background: #ffffff
+  border: 1px solid $separator_color
+  +border-radius($outside_border_radius)
+  clear: both
+  margin: $spacing/2 0
+  overflow: hidden
+  #content
+    background: #ffffff
+    border: 0 // Override Redmine default
+    margin: 0 ($sidebar_width + $spacing * 3) $spacing $spacing
+    min-height: 21em // Keep it roughly higher than the sidebar on the Activity page
+    padding: 0
+    width: auto
+  #sidebar
+    background: #efefff
+    background: -moz-linear-gradient(center top ,#EFEFFF 50%, #FFFFFF) repeat scroll 0 0 transparent
+    background: url(../images/sidebar_separator.png) 0 100% no-repeat, -moz-linear-gradient(center top, #efefef 50%, #FFFFFF) repeat scroll 0 0 transparent
+    // TODO: Webkit
+    +border-radius(0 0 $outside_border_radius 0)
+    float: right
+    padding: $spacing
+    padding-bottom: $spacing * 4
+    width: $sidebar_width
+    h3:first-child
+      color: $text_color
+      font-size: 1.4em
+      margin-top: 0.45em
+    label
+      clear: both
+      font-weight: normal
+      width: auto
+  &.nosidebar
+    #content
+      margin-right: $spacing * 1.5
+    #sidebar
+      display: none
+
+#content .tabs
+  border-right: 1px solid $separator_color
+  float: left
+  height: 1px
+  margin: auto
+  overflow: visible
+  width: $sidebar_width
+  ul
+    border: none
+    padding: inherit
+    position: relative
+    width: auto
+    li
+      background: none
+      float: none
+      margin: 0
+      a
+        background: none
+        border: 0
+        color: $link_color
+        display: block
+        font-size: inherit
+        font-weight: normal
+        line-height: inherit
+        padding: 0
+        text-decoration: none
+        &:hover
+          background: none
+          text-decoration: underline
+        &.selected
+          border: 0
+          font-weight: bold
+  .tabs-buttons
+    display: none
+
+.tab-content
+  margin-left: $sidebar_width + $spacing
+
+.box
+  +box
+  h3:first-child
+    margin-top: 0
+
+#footer
+  background: none
+  border: none
+  clear: both
+  font-size: 0.8em
+  margin: $spacing
+  text-align: center
+
+#ajax-indicator
+  background: #000000
+  background: rgba(0, 0, 0, 0.5)
+  border: 0
+  +border-radius(1em)
+  color: #FFFFFF
+  display: block
+  font-weight: normal
+  left: 50%
+  margin-left: -50px
+  opacity: 1
+  padding: 0
+  position: fixed
+  text-align: center
+  top: $spacing / 2
+  width: 100px
+  span
+    background: none
+    padding: 0

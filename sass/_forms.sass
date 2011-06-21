@@ -1,0 +1,137 @@
+// Forms
+form
+  // em is used for form hints
+  em
+    display: block
+    margin-left: $label_width + $label_spacing
+    font-size: 0.8em
+  // p is used for form field wrappers
+  p
+    margin: $spacing/2 0
+    overflow: hidden
+    br
+      display: none // What's with all the br's?
+  input
+    margin: 2px 0
+    max-width: 80%
+
+label
+  font-weight: bold
+  margin: 2px 0 2px 0
+  text-align: right
+  &.block
+    input[type=checkbox]
+      margin-right: 0.5em
+
+#issue_subject
+  width: 75%
+
+fieldset
+  +box
+  &.box
+    margin-left: -1px
+    margin-right: -1px
+  legend
+    font-weight: bold
+    margin-top: $spacing / 2
+    padding: 0
+    text-shadow: $box_background_color 0 0 2px
+  label
+    text-align: left
+    &.floating
+      width: 18%
+  p
+    clear: left
+
+.box
+  fieldset
+    // Fieldsets inside a box element shouldn't get the box styling
+    border: 0
+    background: inherit
+    +box-shadow(none)
+    margin: 0
+    padding: 0
+
+// It would be nice if submit buttons had a class or a containing element
+input[type=submit]
+  margin: $spacing 1em $spacing 0
+  padding: $spacing
+
+.box + input[type=submit]
+  font-weight: bold
+
+.errorExplanation, .error
+  color: $error_color
+  h2
+    font-size: 1em
+  p
+    margin-top: 0
+.fieldWithErrors input
+  border-color: $error_color
+
+
+div.jstElements,
+div.jstEditor
+  padding: 0
+
+div.jstElements
+  button
+    margin-right: 1px
+  .help
+    margin-right: 0
+div.jstEditor
+  textarea
+    padding: 0.3%
+    width: 99%
+
+#attachments_fields
+  display: block
+  label.inline
+    display: block
+    float: none
+    text-align: left
+    width: auto
+    margin-bottom: 0
+    span
+      margin-right: 1em
+  br
+    // Looks like we're using a br tag for layout purposes?
+    display: none
+  input[type=file]
+    margin-left: 17%
+  input[type=file]:first-child
+    margin-left: 0
+
+#watchers_form
+  overflow: hidden
+  .floating
+    float: left
+    font-weight: normal
+    margin: 0
+    text-align: left
+    width: 25%
+
+// The login form is in a table for some reason.
+form
+  table
+    margin: $spacing 0
+    td, th
+      padding: 0.2em
+    td
+      label
+        float: none
+        text-align: inherit
+        width: auto
+      input
+        float: left
+        margin-right: 1em
+    table
+      // Tables inside tables in the issues filter - hello 2003
+      margin: 0
+  fieldset
+    table
+      margin-top: 0
+
+#filters
+  table
+    margin: 0

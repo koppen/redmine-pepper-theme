@@ -1,0 +1,84 @@
+body
+  background: #f0f5fe url(../images/body_noise.gif)
+  color: $text_color
+  font-family: helvetica, 'helvetica neue', arial, sans-serif
+  font-size: 76%
+  line-height: 1.6em
+  margin: 10px
+
+#wrapper
+  background: none
+
+// Links
+a
+  color: $link_color
+  &:visited
+    color: $link_color / 2
+  &:hover
+    color: $link_color + #222222
+    text-decoration: underline
+  &:visited
+    color: #222299
+
+  img
+    border: none
+
+// Lists
+ul, ol
+  margin: 1em 0
+  padding: 0
+li
+  margin-left: 1.5em
+  padding: 0
+
+// Headings
+h1, h2, h3
+  font-family: 'Myriad Pro', arial, serif
+  letter-spacing: -1px
+  padding: 0
+h1
+  font-size: 1.96em
+h2
+  font-size: 1.96em
+  margin-bottom: 0.4em
+  margin-top: 1em
+h3
+  font-size: 1.4em
+  margin-bottom: 0.2em
+  margin-top: 1.2em
+
+table
+  border-collapse: collapse
+  width: 100%
+th, td
+  padding: 0.2em 0.5em
+td
+  p
+    margin: 0
+th
+  text-align: left
+table
+  .checkbox
+    padding: 0.2em
+    text-align: center
+    input
+      float: none
+      margin-right: 0
+table.list
+  th 
+    background: $separator_color
+  tr, th, td
+    border-bottom: 1px solid $separator_color
+  tr.odd, tr.even
+    background: inherit
+  td.id
+    text-align: left
+hr
+  border: none
+  border-top: 1px solid $separator_color
+
+#sidebar
+  h2, h3
+    color: $text_color
+  p
+    clear: both

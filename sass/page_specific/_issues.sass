@@ -1,0 +1,66 @@
+#query_form_content
+  fieldset
+    padding-top: 0
+  legend
+    cursor: pointer
+  table
+    th, td
+      border: none
+      padding: 0.2em 0
+      vertical-align: top
+
+      // It would be nice if the td text elements of the options table were actually labels, or at
+      // least inside th elements
+      font-weight: bold
+  #available_columns, #selected_columns
+    width: 99% !important
+  tr.filter
+    td
+      input
+        float: left
+  td.add-filter
+    text-align: right
+    vertical-align: top
+    label
+      display: inline
+      float: none
+      width: auto
+
+div.issue
+  background: none
+  border: none
+  margin: ($spacing * 2) 0
+  padding: 0
+
+td div.issue
+  // Don't apply massive margins when displayed inside the calendar
+  margin: 0
+
+tr.issue
+  text-align: left
+
+// Issue page
+table.attributes
+  th
+    padding-left: 0
+
+#issue-form
+  .box
+    // TODO: More browsers, Sass
+    background: -moz-linear-gradient(top, #ffffff, #f0f5fe)
+    border: none
+    +border-radius(0)
+    +box-shadow(none)
+    margin: $spacing 0
+    padding: 0
+
+#history
+  .journal
+    border-left: 4px solid $separator_color
+    padding-left: $spacing
+    .journal-link
+      display: inline
+
+// The update issue form boxes
+#update
+  +box

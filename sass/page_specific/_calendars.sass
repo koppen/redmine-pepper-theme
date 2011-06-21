@@ -1,0 +1,34 @@
+.controller-calendars
+  table.cal
+    td
+      border: 1px solid $separator_color
+      vertical-align: top
+      height: 6em
+      width: 14%
+      &.week-number
+        border: none
+        color: $meta_color
+        text-align: right
+        width: auto
+
+  .buttons
+    margin: $spacing 0
+    label
+      float: none
+      margin: 0 0 0 $spacing
+      &:after
+        content: ':'
+
+  .starting a, .legend .starting
+    background: url("/images/bullet_go.png") no-repeat scroll -1px -2px transparent
+    padding-left: 16px
+  .ending a, .legend .ending
+    background: url("/images/bullet_end.png") no-repeat scroll -1px -2px transparent
+    padding-left: 16px
+  .starting.ending a, .legend .starting.ending
+    background: url("/images/bullet_diamond.png") no-repeat scroll -1px -2px transparent
+    padding-left: 16px
+
+  .legend
+    span
+      display: block
