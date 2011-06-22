@@ -731,9 +731,9 @@ form fieldset table {
 #content .tabs {
   background: #eeeeef;
   background: -moz-linear-gradient(top, #eeeeef, #ddddde);
-  border-radius: 4px;
-  -moz-border-radius: 4px;
-  -webkit-border-radius: 4px;
+  border-radius: 2px;
+  -moz-border-radius: 2px;
+  -webkit-border-radius: 2px;
   height: 3em; }
   #content .tabs ul {
     list-style-type: none;
