@@ -306,9 +306,14 @@ p.subtitle {
   background: none;
   font-size: inherit;
   height: auto;
-  overflow: hidden;
   padding: 0;
-  position: relative; }
+  position: relative;
+  z-index: 999; }
+  #top-menu:after {
+    content: "";
+    display: block;
+    overflow: hidden;
+    clear: both; }
   #top-menu a {
     font-weight: normal;
     margin-right: inherit; }
@@ -355,11 +360,13 @@ p.subtitle {
     border-radius: 4px;
     -moz-border-radius: 4px;
     -webkit-border-radius: 4px;
-    float: left; }
+    float: left;
+    overflow: visible; }
     #top-menu ul li {
       float: left;
       margin: 0;
-      padding: 0; }
+      padding: 0;
+      position: relative; }
     #top-menu ul a {
       display: block;
       padding: 9px;
@@ -376,6 +383,21 @@ p.subtitle {
       text-shadow: rgba(0, 0, 0, 0.5) 1px 1px 1px; }
       #top-menu ul a:hover {
         text-decoration: underline; }
+    #top-menu ul ul.projects {
+      -moz-box-shadow: rgba(0, 0, 0, 0.5) 0 0 9px;
+      -webkit-box-shadow: rgba(0, 0, 0, 0.5) 0 0 9px;
+      box-shadow: rgba(0, 0, 0, 0.5) 0 0 9px;
+      border-top-left-radius: 0;
+      -moz-border-radius-topleft: 0;
+      -webkit-border-top-left-radius: 0;
+      border: 0;
+      margin: 0;
+      padding: 0;
+      position: absolute;
+      top: 38px;
+      left: 0px; }
+      #top-menu ul ul.projects li {
+        float: none; }
 
 #header {
   background: none;
@@ -401,7 +423,8 @@ p.subtitle {
       #header #main-menu ul li {
         float: left;
         margin: 0;
-        padding: 0; }
+        padding: 0;
+        position: relative; }
       #header #main-menu ul a {
         display: block;
         padding: 9px;

@@ -1,21 +1,76 @@
-console.log('Observing');
-document.observe("window.load", function() { 
-  alert('window.load');
-  console.log('window.load');
-});
-
 document.observe("dom:loaded", function() {
   try {
-    var topMenuList = $('wrapper').select('#top-menu > ul').first();
-    var projectSelector = $('quick-search').select('select').first();
+    function buildProjectMenuItem(project) {
+      var link = document.createElement('a');
+      link.href = project.url;
+      link.innerHTML = project.name;
+      if (project.selected) {
+        link.addClassName('selected');
+      };
+      var li = document.createElement('li');
+      li.appendChild(link);
 
-    var wrapper = document.createElement('div');
-    wrapper.appendChild(projectSelector);
+      return li;
+    };
 
-    var baseNode = document.createElement('li');
-    baseNode.appendChild(wrapper)
+    function buildProjectList(projects) {
+      var projectList = document.createElement('ul');
+      projectList.addClassName('projects');
+      projectList.setStyle({ display: 'none' });
 
-    topMenuList.appendChild(baseNode);
+      projects.each(function(project, index) {
+        projectList.appendChild(buildProjectMenuItem(project));
+      });
+
+      return projectList;
+    };
+
+    function buildProjectListMenuItem(projectList) {
+      var menuItem = document.createElement('li');
+      menuItem.appendChild(buildProjectListToggle());
+      menuItem.appendChild(projectList);
+      return menuItem;
+    };
+
+    function buildProjectListToggle() {
+      var toggle = document.createElement('a');
+      toggle.href = '#'; // Makes it behave like a real link
+      toggle.innerHTML = 'Projects...';
+
+      $(toggle).observe('click', function(event) {
+        $(this).up('li').down('.projects').toggle();
+        event.stop();
+      });
+
+      return toggle;
+    };
+
+    function getProjectsFromSelectElement(element) {
+      var projectOptions = element.getElementsBySelector('option[value!=""]');
+      return projectOptions.collect(function(node) {
+        return {
+          url: node.value,
+          name: node.innerHTML,
+          selected: node.readAttribute('selected') == 'selected'
+        };
+      });
+    };
+
+    function moveProjectSelectorToTopMenu(projectSelector, topMenuList) {
+      var projects = getProjectsFromSelectElement(projectSelector);
+      var projectList = buildProjectList(projects);
+
+      var menuItem = buildProjectListMenuItem(projectList);
+      topMenuList.appendChild(menuItem);
+
+      // Remove the original select list
+      projectSelector.toggle();
+    };
+
+    moveProjectSelectorToTopMenu(
+      $('quick-search').select('select').first(),
+      $('wrapper').select('#top-menu > ul').first()
+    );
   } catch(error) {
     console.error(error);
     throw error;
