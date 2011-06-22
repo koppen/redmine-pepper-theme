@@ -377,6 +377,20 @@ p.subtitle {
       border-right: 1px solid rgba(0, 0, 0, 0.3);
       border-bottom: 1px solid rgba(0, 0, 0, 0.3);
       padding: 9px 18px; }
+    #top-menu ul li:first-child a {
+      border-top-left-radius: 4px;
+      -moz-border-radius-topleft: 4px;
+      -webkit-border-top-left-radius: 4px;
+      border-bottom-left-radius: 4px;
+      -moz-border-radius-bottomleft: 4px;
+      -webkit-border-bottom-left-radius: 4px; }
+    #top-menu ul li:last-child a {
+      border-top-right-radius: 4px;
+      -moz-border-radius-topright: 4px;
+      -webkit-border-top-right-radius: 4px;
+      border-bottom-right-radius: 4px;
+      -moz-border-radius-bottomright: 4px;
+      -webkit-border-bottom-right-radius: 4px; }
     #top-menu ul a {
       color: white;
       text-decoration: none;
@@ -390,14 +404,30 @@ p.subtitle {
       border-top-left-radius: 0;
       -moz-border-radius-topleft: 0;
       -webkit-border-top-left-radius: 0;
+      border-top-right-radius: 0;
+      -moz-border-radius-topright: 0;
+      -webkit-border-top-right-radius: 0;
       border: 0;
       margin: 0;
+      overflow: hidden;
       padding: 0;
       position: absolute;
       top: 38px;
-      left: 0px; }
+      left: 0px;
+      z-index: 999; }
       #top-menu ul ul.projects li {
         float: none; }
+        #top-menu ul ul.projects li a {
+          border-radius: 0;
+          -moz-border-radius: 0;
+          -webkit-border-radius: 0; }
+      #top-menu ul ul.projects li:last-child a {
+        border-bottom-right-radius: 4px;
+        -moz-border-radius-bottomright: 4px;
+        -webkit-border-bottom-right-radius: 4px;
+        border-bottom-left-radius: 4px;
+        -moz-border-radius-bottomleft: 4px;
+        -webkit-border-bottom-left-radius: 4px; }
 
 #header {
   background: none;

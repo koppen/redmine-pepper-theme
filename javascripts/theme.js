@@ -35,7 +35,7 @@ document.observe("dom:loaded", function() {
     function buildProjectListToggle() {
       var toggle = document.createElement('a');
       toggle.href = '#'; // Makes it behave like a real link
-      toggle.innerHTML = 'Projects...';
+      toggle.innerHTML = 'Choose project&hellip;';
 
       $(toggle).observe('click', function(event) {
         $(this).up('li').down('.projects').toggle();
@@ -58,6 +58,8 @@ document.observe("dom:loaded", function() {
 
     function moveProjectSelectorToTopMenu(projectSelector, topMenuList) {
       var projects = getProjectsFromSelectElement(projectSelector);
+      var currentProject = projects.find(function(item) { return item.selected; });
+
       var projectList = buildProjectList(projects);
       var menuItem = buildProjectListMenuItem(projectList);
 
@@ -65,7 +67,7 @@ document.observe("dom:loaded", function() {
       $(topMenuList).insert({ top: menuItem });
 
       // Remove the original select list
-      projectSelector.toggle();
+      projectSelector.hide();
     };
 
     moveProjectSelectorToTopMenu(

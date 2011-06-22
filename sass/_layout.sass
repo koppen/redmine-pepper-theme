@@ -52,13 +52,17 @@
     background: #666666 -moz-linear-gradient(top, #777777, #444444)
     +border-radius($outside_border_radius)
     float: left
-    overflow: visible
+    overflow: visible // Don't clip the project submenu
     li > *
       border-left: 1px solid rgba(200,200,200,0.3)
       border-top: 1px solid rgba(200,200,200,0.3)
       border-right: 1px solid rgba(0,0,0,0.3)
       border-bottom: 1px solid rgba(0,0,0,0.3)
       padding: $spacing/2 $spacing
+    li:first-child a
+      +border-radius-left($outside_border_radius)
+    li:last-child a
+      +border-radius-right($outside_border_radius)
     a
       color: #ffffff
       text-decoration: none
@@ -69,15 +73,21 @@
     // Submenu for project selection
     ul.projects
       +box-shadow(rgba(0,0,0,0.5) 0 0 $spacing/2)
-      +border-radius-top-left(0)
+      +border-radius-top(0)
       border: 0
       margin: 0
+      overflow: hidden
       padding: 0
       position: absolute
       top: 38px
       left: 0px
+      z-index: 999 // Display on top of other content
       li
         float: none
+        a
+          +border-radius(0)
+      li:last-child a
+        +border-radius-bottom($outside_border_radius)
 
 #header
   background: none
