@@ -545,44 +545,6 @@ p.subtitle {
   #main.nosidebar #sidebar {
     display: none; }
 
-#content .tabs {
-  border-right: 1px solid #e4e4ef;
-  float: left;
-  height: 1px;
-  margin: auto;
-  overflow: visible;
-  width: 200px; }
-  #content .tabs ul {
-    border: none;
-    padding: inherit;
-    position: relative;
-    width: auto; }
-    #content .tabs ul li {
-      background: none;
-      float: none;
-      margin: 0; }
-      #content .tabs ul li a {
-        background: none;
-        border: 0;
-        color: #4183c4;
-        display: block;
-        font-size: inherit;
-        font-weight: normal;
-        line-height: inherit;
-        padding: 0;
-        text-decoration: none; }
-        #content .tabs ul li a:hover {
-          background: none;
-          text-decoration: underline; }
-        #content .tabs ul li a.selected {
-          border: 0;
-          font-weight: bold; }
-  #content .tabs .tabs-buttons {
-    display: none; }
-
-.tab-content {
-  margin-left: 218px; }
-
 .box {
   background-color: #eeeeef;
   background: -moz-linear-gradient(top, white, #eeeeef);
