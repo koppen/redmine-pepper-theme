@@ -11,7 +11,9 @@ body
 
 // Links
 a
-  color: $link_color
+  &:link
+    color: $link_color
+    text-decoration: underline // Redmine default override
   &:visited
     color: $link_color / 2
   &:hover
@@ -33,6 +35,7 @@ li
 
 // Headings
 h1, h2, h3
+  border: none // Redmine default override
   font-family: 'Myriad Pro', arial, serif
   letter-spacing: -1px
   padding: 0
