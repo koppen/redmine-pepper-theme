@@ -405,9 +405,6 @@ p.subtitle {
         margin-right: 1px; }
       #header #main-menu ul a {
         background: none;
-        border-radius: 1em;
-        -moz-border-radius: 1em;
-        -webkit-border-radius: 1em;
         color: #333333;
         font-weight: normal; }
         #header #main-menu ul a:hover, #header #main-menu ul a:active {
