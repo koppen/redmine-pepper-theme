@@ -59,9 +59,10 @@ document.observe("dom:loaded", function() {
     function moveProjectSelectorToTopMenu(projectSelector, topMenuList) {
       var projects = getProjectsFromSelectElement(projectSelector);
       var projectList = buildProjectList(projects);
-
       var menuItem = buildProjectListMenuItem(projectList);
-      topMenuList.appendChild(menuItem);
+
+      // Insert the menu item as the first in top menu
+      $(topMenuList).insert({ top: menuItem });
 
       // Remove the original select list
       projectSelector.toggle();
