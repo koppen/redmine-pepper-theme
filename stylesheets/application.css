@@ -225,14 +225,16 @@ table .checkbox {
     float: none;
     margin-right: 0; }
 
-table.list th {
-  background: #e4e4ef; }
-table.list tr, table.list th, table.list td {
-  border-bottom: 1px solid #e4e4ef; }
-table.list tr.odd, table.list tr.even {
-  background: inherit; }
-table.list td.id {
-  text-align: left; }
+table.list {
+  border: 0; }
+  table.list th {
+    background: #e4e4ef; }
+  table.list tr, table.list th, table.list td {
+    border-bottom: 1px solid #e4e4ef; }
+  table.list tr.odd, table.list tr.even {
+    background: inherit; }
+  table.list td.id {
+    text-align: left; }
 
 hr {
   border: none;
