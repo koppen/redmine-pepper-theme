@@ -93,6 +93,8 @@
         float: none
         a
           +border-radius(0)
+        .selected:before
+          content: '✔ '
       li:last-child a
         +border-radius-bottom($outside_border_radius)
 

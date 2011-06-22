@@ -429,6 +429,8 @@ p.subtitle {
           border-radius: 0;
           -moz-border-radius: 0;
           -webkit-border-radius: 0; }
+        #top-menu ul ul.projects li .selected:before {
+          content: "✔ "; }
       #top-menu ul ul.projects li:last-child a {
         border-bottom-right-radius: 4px;
         -moz-border-radius-bottomright: 4px;
