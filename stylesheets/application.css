@@ -397,6 +397,14 @@ p.subtitle {
       text-shadow: rgba(0, 0, 0, 0.5) 1px 1px 1px; }
       #top-menu ul a:hover {
         text-decoration: underline; }
+      #top-menu ul a.active, #top-menu ul a:active {
+        border-left: 1px solid rgba(0, 0, 0, 0.3);
+        border-top: 1px solid rgba(0, 0, 0, 0.3);
+        border-right: 1px solid rgba(200, 200, 200, 0.3);
+        border-bottom: 1px solid rgba(200, 200, 200, 0.3);
+        -moz-box-shadow: rgba(0, 0, 0, 0.5) 0 0 1em inset;
+        -webkit-box-shadow: rgba(0, 0, 0, 0.5) 0 0 1em inset;
+        box-shadow: rgba(0, 0, 0, 0.5) 0 0 1em inset; }
     #top-menu ul ul.projects {
       -moz-box-shadow: rgba(0, 0, 0, 0.5) 0 0 9px;
       -webkit-box-shadow: rgba(0, 0, 0, 0.5) 0 0 9px;

@@ -39,6 +39,8 @@ document.observe("dom:loaded", function() {
 
       $(toggle).observe('click', function(event) {
         $(this).up('li').down('.projects').toggle();
+        $(this).toggleClassName('active');
+
         event.stop();
       });
 
