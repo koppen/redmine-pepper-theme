@@ -729,6 +729,8 @@ form fieldset table {
   margin: 0; }
 
 #content .tabs {
+  background: #eeeeef;
+  background: -moz-linear-gradient(top, #eeeeef, #ddddde);
   border-radius: 4px;
   -moz-border-radius: 4px;
   -webkit-border-radius: 4px;
@@ -738,7 +740,6 @@ form fieldset table {
     margin: 0;
     overflow: hidden;
     padding: 0;
-    background: -moz-linear-gradient(top, #eeeeef, #ddddde);
     border: 0;
     padding: 0; }
     #content .tabs ul li {
