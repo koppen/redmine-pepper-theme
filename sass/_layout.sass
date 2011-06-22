@@ -45,17 +45,19 @@
     background: #666666 -moz-linear-gradient(top, #777777, #444444)
     +border-radius($outside_border_radius)
     float: left
-    a
+    li > *
       border-left: 1px solid rgba(200,200,200,0.3)
       border-top: 1px solid rgba(200,200,200,0.3)
       border-right: 1px solid rgba(0,0,0,0.3)
       border-bottom: 1px solid rgba(0,0,0,0.3)
-      color: #ffffff
       padding: $spacing/2 $spacing
+    a
+      color: #ffffff
       text-decoration: none
       text-shadow: rgba(0,0,0,0.5) 1px 1px 1px
       &:hover
         text-decoration: underline
+    select
 
 
 #header
@@ -87,8 +89,6 @@
         &.selected
           font-weight: bold // Override Redmine default
   #quick-search
-    float: right
-    width: 385px
     form
       float: left
     a

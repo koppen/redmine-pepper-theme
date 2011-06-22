@@ -364,13 +364,14 @@ p.subtitle {
       display: block;
       padding: 9px;
       text-decoration: none; }
-    #top-menu ul a {
+    #top-menu ul li > * {
       border-left: 1px solid rgba(200, 200, 200, 0.3);
       border-top: 1px solid rgba(200, 200, 200, 0.3);
       border-right: 1px solid rgba(0, 0, 0, 0.3);
       border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+      padding: 9px 18px; }
+    #top-menu ul a {
       color: white;
-      padding: 9px 18px;
       text-decoration: none;
       text-shadow: rgba(0, 0, 0, 0.5) 1px 1px 1px; }
       #top-menu ul a:hover {
@@ -415,31 +416,28 @@ p.subtitle {
           color: #4183c4; }
         #header #main-menu ul a.selected {
           font-weight: bold; }
-  #header #quick-search {
+  #header #quick-search form {
+    float: left; }
+  #header #quick-search a {
+    color: #333333;
+    text-decoration: none; }
+  #header #quick-search form {
+    display: block; }
+  #header #quick-search input {
+    border-radius: 1em;
+    -moz-border-radius: 1em;
+    -webkit-border-radius: 1em;
+    border-top: 1px solid #848484;
+    border-right: 1px solid #c1c1c1;
+    border-bottom: 1px solid #e1e1e1;
+    border-left: 1px solid #c1c1c1;
+    -moz-box-shadow: inset rgba(0, 0, 0, 0.2) 1px 1px 2px;
+    -webkit-box-shadow: inset rgba(0, 0, 0, 0.2) 1px 1px 2px;
+    box-shadow: inset rgba(0, 0, 0, 0.2) 1px 1px 2px;
+    padding: 0.2em 1em; }
+  #header #quick-search select {
     float: right;
-    width: 385px; }
-    #header #quick-search form {
-      float: left; }
-    #header #quick-search a {
-      color: #333333;
-      text-decoration: none; }
-    #header #quick-search form {
-      display: block; }
-    #header #quick-search input {
-      border-radius: 1em;
-      -moz-border-radius: 1em;
-      -webkit-border-radius: 1em;
-      border-top: 1px solid #848484;
-      border-right: 1px solid #c1c1c1;
-      border-bottom: 1px solid #e1e1e1;
-      border-left: 1px solid #c1c1c1;
-      -moz-box-shadow: inset rgba(0, 0, 0, 0.2) 1px 1px 2px;
-      -webkit-box-shadow: inset rgba(0, 0, 0, 0.2) 1px 1px 2px;
-      box-shadow: inset rgba(0, 0, 0, 0.2) 1px 1px 2px;
-      padding: 0.2em 1em; }
-    #header #quick-search select {
-      float: right;
-      width: 150px; }
+    width: 150px; }
 
 #main {
   -moz-box-shadow: rgba(0, 0, 0, 0.2) 1px 1px 4px;
