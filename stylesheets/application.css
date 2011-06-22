@@ -358,16 +358,17 @@ p.subtitle {
       float: left;
       margin: 0;
       padding: 0; }
-      #top-menu ul li a {
-        display: block;
-        padding: 9px 18px;
-        text-decoration: none; }
+    #top-menu ul a {
+      display: block;
+      padding: 9px;
+      text-decoration: none; }
     #top-menu ul a {
       border-left: 1px solid rgba(200, 200, 200, 0.3);
       border-top: 1px solid rgba(200, 200, 200, 0.3);
       border-right: 1px solid rgba(0, 0, 0, 0.3);
       border-bottom: 1px solid rgba(0, 0, 0, 0.3);
       color: white;
+      padding: 9px 18px;
       text-decoration: none;
       text-shadow: rgba(0, 0, 0, 0.5) 1px 1px 1px; }
       #top-menu ul a:hover {
@@ -384,8 +385,9 @@ p.subtitle {
     margin: 0 18px; }
   #header #main-menu {
     float: left;
-    position: relative;
+    margin-left: 9px;
     margin-right: auto;
+    position: relative;
     left: 0; }
     #header #main-menu ul {
       list-style-type: none;
@@ -397,10 +399,10 @@ p.subtitle {
         float: left;
         margin: 0;
         padding: 0; }
-        #header #main-menu ul li a {
-          display: block;
-          padding: 9px 18px;
-          text-decoration: none; }
+      #header #main-menu ul a {
+        display: block;
+        padding: 9px;
+        text-decoration: none; }
       #header #main-menu ul li {
         margin-right: 1px; }
       #header #main-menu ul a {
