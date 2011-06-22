@@ -603,6 +603,8 @@ fieldset {
   fieldset.box {
     margin-left: -1px;
     margin-right: -1px; }
+  fieldset.collapsible {
+    border-width: 1px; }
   fieldset legend {
     font-weight: bold;
     margin-top: 9px;
