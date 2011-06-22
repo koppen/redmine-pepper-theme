@@ -168,8 +168,6 @@ body {
 a:link {
   color: #4183c4;
   text-decoration: underline; }
-a:visited {
-  color: #204162; }
 a:hover {
   color: #63a5e6;
   text-decoration: underline; }
@@ -725,6 +723,61 @@ form fieldset table {
 
 #filters table {
   margin: 0; }
+
+#content .tabs {
+  border-radius: 4px;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  height: 3em; }
+  #content .tabs ul {
+    list-style-type: none;
+    margin: 0;
+    overflow: hidden;
+    padding: 0;
+    background: -moz-linear-gradient(top, #eeeeef, #ddddde);
+    border: 0;
+    padding: 0; }
+    #content .tabs ul li {
+      float: left;
+      margin: 0;
+      padding: 0;
+      position: relative; }
+    #content .tabs ul a {
+      display: block;
+      padding: 9px;
+      text-decoration: none; }
+    #content .tabs ul li {
+      background: transparent;
+      margin: 0; }
+      #content .tabs ul li a {
+        background: transparent;
+        border: 0;
+        font-weight: normal;
+        padding: 11px 9px; }
+        #content .tabs ul li a:hover {
+          background: transparent;
+          color: #63a5e6; }
+        #content .tabs ul li a.selected {
+          background: transparent;
+          border: 0;
+          color: #333333;
+          position: relative; }
+          #content .tabs ul li a.selected:after {
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            content: "";
+            display: block;
+            border-top: 0;
+            border-right: 9px solid transparent;
+            border-bottom: 9px solid white;
+            border-left: 9px solid transparent;
+            width: 0px;
+            margin-left: -9px; }
+          #content .tabs ul li a.selected:hover {
+            background: transparent; }
+  #content .tabs .tabs-buttons {
+    display: none; }
 
 .action-login #top-menu, .action-lost_password #top-menu {
   padding: 0; }
