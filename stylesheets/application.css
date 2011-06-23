@@ -243,6 +243,16 @@ hr {
 #sidebar p {
   clear: both; }
 
+#header h1 a.root,
+#header h1 a.ancestor {
+  color: #999999;
+  font-size: 1em;
+  text-decoration: none; }
+  #header h1 a.root:hover,
+  #header h1 a.ancestor:hover {
+    color: #63a5e6;
+    text-decoration: underline; }
+
 .author {
   color: #888888;
   font-size: 0.8em;

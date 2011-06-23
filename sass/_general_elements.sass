@@ -84,3 +84,15 @@ hr
     color: $text_color
   p
     clear: both
+
+// The subproject breadcrumb navigation
+#header
+  h1
+    a.root,
+    a.ancestor
+      color: $text_color*3
+      font-size: 1em
+      text-decoration: none
+      &:hover
+        color: $link_hover_color
+        text-decoration: underline
