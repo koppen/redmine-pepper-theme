@@ -68,6 +68,10 @@ document.observe("dom:loaded", function() {
       // Insert the menu item as the first in top menu
       $(topMenuList).insert({ top: menuItem });
 
+      // Make the projectList at least as wide as the menu item
+      var width = menuItem.getWidth();
+      projectList.setStyle({ minWidth: width + 'px' });
+
       // Remove the original select list
       projectSelector.hide();
     };
@@ -76,6 +80,8 @@ document.observe("dom:loaded", function() {
       $('quick-search').select('select').first(),
       $('wrapper').select('#top-menu > ul').first()
     );
+
+    
   } catch(error) {
     console.error(error);
     throw error;
