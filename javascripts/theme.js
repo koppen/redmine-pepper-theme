@@ -13,7 +13,8 @@ document.observe("dom:loaded", function() {
       return li;
     };
 
-    function buildProjectList(projects) {
+    function buildProjectList(projectSelector) {
+      var projects = getProjectsFromSelectElement(projectSelector);
       var projectList = document.createElement('ul');
       projectList.addClassName('projects');
       projectList.setStyle({ display: 'none' });
@@ -25,10 +26,15 @@ document.observe("dom:loaded", function() {
       return projectList;
     };
 
-    function buildProjectListMenuItem(title, projectList) {
+    function buildProjectListMenuItem(projectSelector) {
       var menuItem = document.createElement('li');
+
+      var title = getTitleFromSelectElement(projectSelector);
       menuItem.appendChild(buildProjectListToggle(title));
+
+      var projectList = buildProjectList(projectSelector);
       menuItem.appendChild(projectList);
+
       return menuItem;
     };
 
@@ -64,20 +70,14 @@ document.observe("dom:loaded", function() {
     };
 
     function moveProjectSelectorToTopMenu(projectSelector, topMenuList) {
-      var projects = getProjectsFromSelectElement(projectSelector);
-      var currentProject = projects.find(function(item) { return item.selected; });
-
-      var projectList = buildProjectList(projects);
-
-      var title = getTitleFromSelectElement(projectSelector);
-      var menuItem = buildProjectListMenuItem(title, projectList);
+      var menuItem = buildProjectListMenuItem(projectSelector);
 
       // Insert the menu item as the first in top menu
       $(topMenuList).insert({ top: menuItem });
 
       // Make the projectList at least as wide as the menu item
       var width = menuItem.getWidth();
-      projectList.setStyle({ minWidth: width + 'px' });
+      $(menuItem).down('.projects').setStyle({ minWidth: width + 'px' });
 
       // Remove the original select list
       projectSelector.hide();
