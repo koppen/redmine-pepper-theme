@@ -70,6 +70,10 @@ document.observe("dom:loaded", function() {
     };
 
     function moveProjectSelectorToTopMenu(projectSelector, topMenuList) {
+      if (!projectSelector || !topMenuList) {
+        return false
+      }
+
       var menuItem = buildProjectListMenuItem(projectSelector);
 
       // Insert the menu item as the first in top menu
@@ -84,8 +88,8 @@ document.observe("dom:loaded", function() {
     };
 
     moveProjectSelectorToTopMenu(
-      $('quick-search').select('select').first(),
-      $('wrapper').select('#top-menu > ul').first()
+      $$('#quick-search select').first(),
+      $$('#wrapper #top-menu > ul').first()
     );
 
   } catch(error) {
