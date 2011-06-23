@@ -784,12 +784,20 @@ form fieldset table {
   #content .tabs .tabs-buttons {
     display: none; }
 
-.action-login #top-menu, .action-lost_password #top-menu {
-  padding: 0; }
 .action-login #wrapper, .action-lost_password #wrapper {
   margin-left: auto;
   margin-right: auto;
   width: 50%; }
+.action-login #top-menu, .action-lost_password #top-menu {
+  float: right;
+  margin-right: 18px;
+  padding: 0; }
+  .action-login #top-menu #account, .action-lost_password #top-menu #account {
+    float: right;
+    position: relative;
+    width: auto; }
+    .action-login #top-menu #account ul, .action-lost_password #top-menu #account ul {
+      width: auto; }
 
 .controller-activities .time {
   color: #888888;
