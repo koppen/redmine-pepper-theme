@@ -25,17 +25,17 @@ document.observe("dom:loaded", function() {
       return projectList;
     };
 
-    function buildProjectListMenuItem(projectList) {
+    function buildProjectListMenuItem(title, projectList) {
       var menuItem = document.createElement('li');
-      menuItem.appendChild(buildProjectListToggle());
+      menuItem.appendChild(buildProjectListToggle(title));
       menuItem.appendChild(projectList);
       return menuItem;
     };
 
-    function buildProjectListToggle() {
+    function buildProjectListToggle(title) {
       var toggle = document.createElement('a');
       toggle.href = '#'; // Makes it behave like a real link
-      toggle.innerHTML = 'Choose project&hellip;';
+      toggle.innerHTML = title.replace('...', '&hellip;');
 
       $(toggle).observe('click', function(event) {
         $(this).up('li').down('.projects').toggle();
@@ -58,12 +58,19 @@ document.observe("dom:loaded", function() {
       });
     };
 
+    function getTitleFromSelectElement(element) {
+      var title = element.childElements().first().innerHTML;
+      return title;
+    };
+
     function moveProjectSelectorToTopMenu(projectSelector, topMenuList) {
       var projects = getProjectsFromSelectElement(projectSelector);
       var currentProject = projects.find(function(item) { return item.selected; });
 
       var projectList = buildProjectList(projects);
-      var menuItem = buildProjectListMenuItem(projectList);
+
+      var title = getTitleFromSelectElement(projectSelector);
+      var menuItem = buildProjectListMenuItem(title, projectList);
 
       // Insert the menu item as the first in top menu
       $(topMenuList).insert({ top: menuItem });
@@ -81,7 +88,6 @@ document.observe("dom:loaded", function() {
       $('wrapper').select('#top-menu > ul').first()
     );
 
-    
   } catch(error) {
     console.error(error);
     throw error;
