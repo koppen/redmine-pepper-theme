@@ -1,13 +1,13 @@
 document.observe("dom:loaded", function() {
-  try {
+  //try {
     function buildProjectMenuItem(project) {
-      var link = document.createElement('a');
+      var link = $(document.createElement('a'));
       link.href = project.url;
       link.innerHTML = project.name;
       if (project.selected) {
         link.addClassName('selected');
       };
-      var li = document.createElement('li');
+      var li = $(document.createElement('li'));
       li.appendChild(link);
 
       return li;
@@ -15,7 +15,7 @@ document.observe("dom:loaded", function() {
 
     function buildProjectList(projectSelector) {
       var projects = getProjectsFromSelectElement(projectSelector);
-      var projectList = document.createElement('ul');
+      var projectList = $(document.createElement('ul'));
       projectList.addClassName('projects');
       projectList.setStyle({ display: 'none' });
 
@@ -27,7 +27,7 @@ document.observe("dom:loaded", function() {
     };
 
     function buildProjectListMenuItem(projectSelector) {
-      var menuItem = document.createElement('li');
+      var menuItem = $(document.createElement('li'));
 
       var title = getTitleFromSelectElement(projectSelector);
       menuItem.appendChild(buildProjectListToggle(title));
@@ -39,7 +39,7 @@ document.observe("dom:loaded", function() {
     };
 
     function buildProjectListToggle(title) {
-      var toggle = document.createElement('a');
+      var toggle = $(document.createElement('a'));
       toggle.href = '#'; // Makes it behave like a real link
       toggle.innerHTML = title.replace('...', '&hellip;');
 
@@ -71,7 +71,7 @@ document.observe("dom:loaded", function() {
 
     function moveProjectSelectorToTopMenu(projectSelector, topMenuList) {
       if (!projectSelector || !topMenuList) {
-        return false
+        return false;
       }
 
       var menuItem = buildProjectListMenuItem(projectSelector);
@@ -92,10 +92,12 @@ document.observe("dom:loaded", function() {
       $$('#wrapper #top-menu > ul').first()
     );
 
-  } catch(error) {
-    console.error(error);
-    throw error;
-  }
+  // } catch(error) {
+  //   if (typeof(console) != 'undefined') {
+  //     console.error(error);
+  //   };
+  //   throw error;
+  // }
   
 });
 

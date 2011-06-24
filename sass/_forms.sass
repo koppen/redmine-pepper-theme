@@ -49,7 +49,7 @@ fieldset
   fieldset
     // Fieldsets inside a box element shouldn't get the box styling
     border: 0
-    background: inherit
+    background: none
     +box-shadow(none)
     margin: 0
     padding: 0
@@ -57,7 +57,7 @@ fieldset
 // It would be nice if submit buttons had a class or a containing element
 input[type=submit]
   margin: $spacing 1em $spacing 0
-  padding: $spacing
+  padding: $spacing/2 $spacing
 
 .box + input[type=submit]
   font-weight: bold

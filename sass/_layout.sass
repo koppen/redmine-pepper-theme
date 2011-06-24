@@ -48,13 +48,19 @@
       color: $link_color
   ul
     +navigation_list
+    +clearfix
     +box-shadow(rgba(0,0,0,0.2) 1px 1px 4px)
-    background: #666666
-    +background(linear-gradient(top, #777777, #444444))
+    +background(#666666 linear-gradient(top, #777777, #444444))
     +border-radius($outside_border_radius)
     float: left
     overflow: visible // Don't clip the project submenu
-    li > *
+    li a
+      // Colors for browsers without rgba support
+      border-left: 1px solid #7e7e7e
+      border-top: 1px solid #7e7e7e
+      border-right: 1px solid #424242
+      border-bottom: 1px solid #424242
+      // Colors for proper browsers
       border-left: 1px solid rgba(200,200,200,0.3)
       border-top: 1px solid rgba(200,200,200,0.3)
       border-right: 1px solid rgba(0,0,0,0.3)
@@ -130,6 +136,8 @@
   #quick-search
     form
       float: left
+      width: 225px
+      width: $sidebar_width + $spacing*2
     a
       color: $text_color
       text-decoration: none
@@ -142,6 +150,7 @@
       border-bottom: 1px solid #e1e1e1
       border-left: 1px solid #c1c1c1
       +box-shadow(inset rgba(0,0,0,0.2) 1px 1px 2px)
+      float: right
       padding: 0.2em 1em
     select
       // The Jump to project dropdown
@@ -164,7 +173,7 @@
     padding: 0
     width: auto
   #sidebar
-    background: #efefff
+    background: #ffffff url('../images/sidebar_separator.png') no-repeat 0 100%
     +background(url('../images/sidebar_separator.png') 0 100% no-repeat, linear-gradient(center top, #efefef 50%, #FFFFFF) repeat scroll 0 0 transparent)
     +border-radius(0 0 $outside_border_radius 0)
     float: right
