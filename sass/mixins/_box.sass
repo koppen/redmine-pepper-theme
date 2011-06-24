@@ -1,7 +1,6 @@
 =box
   background-color: $box_background_color
-  // TODO: Sass and other browsers
-  background: -moz-linear-gradient(top, #ffffff, $box_background_color)
+  +background(linear-gradient(top, #ffffff, $box_background_color))
   +border-radius($outside_border_radius / 2)
   +box-shadow(inset #ffffff 0 0 1em)
   border: 1px solid $separator_color
