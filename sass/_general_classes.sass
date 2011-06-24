@@ -3,20 +3,21 @@
   font-size: 0.8em
   margin-top: 0
 
-.flash
+div.flash
   +border-radius(0.4em)
   background-color: #321401
   background-color: rgba(0,0,0,0.4)
+  background-position: $spacing/2 50%
   font-weight: bold
   text-align: center
-  margin: 1em 0 0.5em 0
+  margin: $spacing 0
   padding: ($spacing / 2) $spacing
-.error
-  background-color: $error_color * 3.5
-  color: $error_color
-.notice
-  background-color: $success_color * 3
-  color: $success_color
+  &.error
+    background-color: transparent
+    color: $error_color
+  &.notice
+    background-color: adjust-lightness($success_color, 50%)
+    color: $success_color
 
 .pagination
   text-align: center

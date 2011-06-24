@@ -4,9 +4,10 @@
 $tab_arrow_size: $spacing/2
 
 #content .tabs
-  background: $box_background_color - #111111
-  +background(linear-gradient(top, $box_background_color, $box_background_color - #111111))
+  background: adjust-lightness($box_background_color, -5%)
+  +background(linear-gradient(top, $box_background_color, adjust-lightness($box_background_color, -5%) 80%, adjust-lightness($box_background_color, -12%)))
   +border-radius($outside_border_radius / 2)
+  +border-bottom-radius(0)
   height: 3em
   ul
     +navigation-list
