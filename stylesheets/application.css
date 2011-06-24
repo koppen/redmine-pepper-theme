@@ -314,7 +314,7 @@ h1 {
 }
 
 /* line 42, ../sass/_general_elements.sass */
-h2 {
+h2, .wiki h1 {
   font-size: 1.96em;
   margin-bottom: 0.4em;
   margin-top: 1em;
@@ -854,7 +854,7 @@ p.subtitle {
 #main #content {
   background: white;
   border: 0;
-  margin: 0 254px 18px 18px;
+  margin: 18px 254px 18px 18px;
   min-height: 21em;
   padding: 0;
   width: auto;
@@ -1523,4 +1523,9 @@ table.attributes th {
 .action-issue_report .list th {
   text-align: center;
   text-transform: capitalize;
+}
+
+/* line 1, ../sass/page_specific/_wiki.sass */
+.wiki h1 {
+  border: 0;
 }
