@@ -794,6 +794,9 @@ form fieldset table {
   #content .tabs .tabs-buttons {
     display: none; }
 
+.action-login #main #content, .action-lost_password #main #content {
+  margin-bottom: 0;
+  min-height: 0; }
 .action-login #wrapper, .action-lost_password #wrapper {
   margin-left: auto;
   margin-right: auto;
@@ -808,6 +811,11 @@ form fieldset table {
     width: auto; }
     .action-login #top-menu #account ul, .action-lost_password #top-menu #account ul {
       width: auto; }
+
+#login-form table {
+  background: none;
+  border: none;
+  margin: 36px 0 18px 0; }
 
 .controller-activities .time {
   color: #888888;
@@ -911,14 +919,6 @@ table.attributes th {
   border: 1px solid #e4e4ef;
   margin: 9px 0;
   padding: 18px; }
-
-#login-form table {
-  background: none;
-  border: none;
-  margin: 1em 0; }
-
-.controller-account.action-login #main #content {
-  min-height: 0; }
 
 .action-issue_report .list th {
   text-align: center;
