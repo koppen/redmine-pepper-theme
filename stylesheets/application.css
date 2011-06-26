@@ -1720,4 +1720,20 @@ table.attributes th {
   .tabular.settings label {
     margin-left: 0;
   }
+
+  /* line 100, ../sass/responsive/_small_screens.sass */
+  .action-login #wrapper, .action-lost_password #wrapper {
+    width: auto;
+  }
+  /* line 102, ../sass/responsive/_small_screens.sass */
+  .action-login #top-menu, .action-lost_password #top-menu {
+    margin-right: 9px;
+  }
+
+  /* line 106, ../sass/responsive/_small_screens.sass */
+  #login-form table {
+    background: none;
+    border: none;
+    margin: 18px 0 9px 0;
+  }
 }
