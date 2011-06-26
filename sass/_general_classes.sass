@@ -4,14 +4,16 @@
   margin-top: 0
 
 div.flash
-  +border-radius(0.4em)
+  border: 0
+  +border-radius($outside_border_radius/2)
   background-color: #321401
   background-color: rgba(0,0,0,0.4)
-  background-position: $spacing/2 50%
   font-weight: bold
   text-align: center
   margin: $spacing 0
   padding: ($spacing / 2) $spacing
+  &.error, &.notice
+    background-position: $spacing/2 50%
   &.error
     background-color: transparent
     color: $error_color

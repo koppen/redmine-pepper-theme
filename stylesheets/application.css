@@ -418,37 +418,41 @@ hr {
 
 /* line 6, ../sass/_general_classes.sass */
 div.flash {
-  -moz-border-radius: 0.4em;
-  -webkit-border-radius: 0.4em;
-  -o-border-radius: 0.4em;
-  -ms-border-radius: 0.4em;
-  -khtml-border-radius: 0.4em;
-  border-radius: 0.4em;
+  border: 0;
+  -moz-border-radius: 2px;
+  -webkit-border-radius: 2px;
+  -o-border-radius: 2px;
+  -ms-border-radius: 2px;
+  -khtml-border-radius: 2px;
+  border-radius: 2px;
   background-color: #321401;
   background-color: rgba(0, 0, 0, 0.4);
-  background-position: 9px 50%;
   font-weight: bold;
   text-align: center;
   margin: 18px 0;
   padding: 9px 18px;
 }
 /* line 15, ../sass/_general_classes.sass */
+div.flash.error, div.flash.notice {
+  background-position: 9px 50%;
+}
+/* line 17, ../sass/_general_classes.sass */
 div.flash.error {
   background-color: transparent;
   color: #dd0000;
 }
-/* line 18, ../sass/_general_classes.sass */
+/* line 20, ../sass/_general_classes.sass */
 div.flash.notice {
   background-color: #d9f2d9;
   color: #339933;
 }
 
-/* line 22, ../sass/_general_classes.sass */
+/* line 24, ../sass/_general_classes.sass */
 .pagination {
   text-align: center;
 }
 
-/* line 25, ../sass/_general_classes.sass */
+/* line 27, ../sass/_general_classes.sass */
 p.subtitle {
   color: #888888;
   font-size: 0.9em;
@@ -456,38 +460,38 @@ p.subtitle {
   margin: 0;
 }
 
-/* line 31, ../sass/_general_classes.sass */
+/* line 33, ../sass/_general_classes.sass */
 .splitcontentleft, .splitcontentright {
   width: 48%;
 }
 
-/* line 33, ../sass/_general_classes.sass */
+/* line 35, ../sass/_general_classes.sass */
 .splitcontentleft {
   float: left;
 }
 
-/* line 35, ../sass/_general_classes.sass */
+/* line 37, ../sass/_general_classes.sass */
 .splitcontentright {
   float: right;
 }
 
-/* line 38, ../sass/_general_classes.sass */
+/* line 40, ../sass/_general_classes.sass */
 .contextual {
   float: right;
   font-size: inherit;
 }
 
-/* line 41, ../sass/_general_classes.sass */
+/* line 43, ../sass/_general_classes.sass */
 #content > .contextual {
   margin-top: 0.4em;
 }
 
-/* line 44, ../sass/_general_classes.sass */
+/* line 46, ../sass/_general_classes.sass */
 .nodata {
   color: #888888;
 }
 
-/* line 47, ../sass/_general_classes.sass */
+/* line 49, ../sass/_general_classes.sass */
 .tip {
   -moz-box-shadow: rgba(0, 0, 0, 0.5) 0 0 2em;
   -webkit-box-shadow: rgba(0, 0, 0, 0.5) 0 0 2em;
