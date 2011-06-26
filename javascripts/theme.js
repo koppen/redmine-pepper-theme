@@ -1,3 +1,10 @@
+function injectViewportMetaTag() {
+  var meta = $(document.createElement('meta'));
+  meta.name = 'viewport';
+  meta.content = 'width=450';
+  $$('head')[0].insert(meta);
+};
+
 document.observe("dom:loaded", function() {
   //try {
     function buildProjectMenuItem(project) {
@@ -91,6 +98,8 @@ document.observe("dom:loaded", function() {
       $$('#quick-search select').first(),
       $$('#wrapper #top-menu > ul').first()
     );
+
+    injectViewportMetaTag();
 
   // } catch(error) {
   //   if (typeof(console) != 'undefined') {

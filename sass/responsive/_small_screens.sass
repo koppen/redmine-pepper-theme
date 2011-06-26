@@ -1,0 +1,57 @@
+$spacing: $spacing/2
+@media all and (max-device-width: 767px), all and (max-width: 449px)
+  body
+    margin: 0
+    min-width: 0
+  #account, #loggedas, #sidebar, #footer
+    display: none
+  #top-menu
+    ul
+      +border-radius(0)
+      +box-shadow(none)
+      li
+        width: 16.666666666%
+        a
+          overflow: hidden
+          padding: $spacing
+          text-align: center
+          text-overflow: ellipsis
+        &:first-child a
+          border-left: 0
+          +border-radius(0)
+        &:last-child a
+          border-right: 0
+          +border-radius(0)
+        ul.projects
+          width: 200% // Relative to parent menu item
+          li
+            text-align: left
+            width: auto
+  #header
+    margin: $spacing*2 0
+    h1
+      margin: $spacing
+    #main-menu
+      margin: 0
+    #quick-search
+      color: transparent
+      margin-right: $spacing
+      a
+        display: none
+  #main
+    border: 0
+    +border-radius(0)
+    +box-shadow(none)
+    #content, &.nosidebar #content
+      margin: $spacing
+  .splitcontentleft, .splitcontentright
+    float: none
+    width: auto
+  .tabular
+    p
+      padding: $spacing
+      label
+        display: block
+        float: none
+        margin-left: 0
+        text-align: left

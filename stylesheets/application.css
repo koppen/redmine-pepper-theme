@@ -1,4 +1,4 @@
-@import url(../../../stylesheets/application.css) ;;
+@import url(../../../stylesheets/application.css);
 /* line 1, ../sass/default/_icons.scss */
 .icon {
   background-position: 0% 50%;
@@ -1532,4 +1532,130 @@ table.attributes th {
 /* line 1, ../sass/page_specific/_wiki.sass */
 .wiki h1 {
   border: 0;
+}
+
+@media all and (max-device-width: 767px), all and (max-width: 449px) {
+  /* line 3, ../sass/responsive/_small_screens.sass */
+  body {
+    margin: 0;
+    min-width: 0;
+  }
+
+  /* line 6, ../sass/responsive/_small_screens.sass */
+  #account, #loggedas, #sidebar, #footer {
+    display: none;
+  }
+
+  /* line 9, ../sass/responsive/_small_screens.sass */
+  #top-menu ul {
+    -moz-border-radius: 0;
+    -webkit-border-radius: 0;
+    -o-border-radius: 0;
+    -ms-border-radius: 0;
+    -khtml-border-radius: 0;
+    border-radius: 0;
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+    -o-box-shadow: none;
+    box-shadow: none;
+  }
+  /* line 12, ../sass/responsive/_small_screens.sass */
+  #top-menu ul li {
+    width: 16.667%;
+  }
+  /* line 14, ../sass/responsive/_small_screens.sass */
+  #top-menu ul li a {
+    overflow: hidden;
+    padding: 9px;
+    text-align: center;
+    text-overflow: ellipsis;
+  }
+  /* line 19, ../sass/responsive/_small_screens.sass */
+  #top-menu ul li:first-child a {
+    border-left: 0;
+    -moz-border-radius: 0;
+    -webkit-border-radius: 0;
+    -o-border-radius: 0;
+    -ms-border-radius: 0;
+    -khtml-border-radius: 0;
+    border-radius: 0;
+  }
+  /* line 22, ../sass/responsive/_small_screens.sass */
+  #top-menu ul li:last-child a {
+    border-right: 0;
+    -moz-border-radius: 0;
+    -webkit-border-radius: 0;
+    -o-border-radius: 0;
+    -ms-border-radius: 0;
+    -khtml-border-radius: 0;
+    border-radius: 0;
+  }
+  /* line 25, ../sass/responsive/_small_screens.sass */
+  #top-menu ul li ul.projects {
+    width: 200%;
+  }
+  /* line 27, ../sass/responsive/_small_screens.sass */
+  #top-menu ul li ul.projects li {
+    text-align: left;
+    width: auto;
+  }
+
+  /* line 30, ../sass/responsive/_small_screens.sass */
+  #header {
+    margin: 18px 0;
+  }
+  /* line 32, ../sass/responsive/_small_screens.sass */
+  #header h1 {
+    margin: 9px;
+  }
+  /* line 34, ../sass/responsive/_small_screens.sass */
+  #header #main-menu {
+    margin: 0;
+  }
+  /* line 36, ../sass/responsive/_small_screens.sass */
+  #header #quick-search {
+    color: transparent;
+    margin-right: 9px;
+  }
+  /* line 39, ../sass/responsive/_small_screens.sass */
+  #header #quick-search a {
+    display: none;
+  }
+
+  /* line 41, ../sass/responsive/_small_screens.sass */
+  #main {
+    border: 0;
+    -moz-border-radius: 0;
+    -webkit-border-radius: 0;
+    -o-border-radius: 0;
+    -ms-border-radius: 0;
+    -khtml-border-radius: 0;
+    border-radius: 0;
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+    -o-box-shadow: none;
+    box-shadow: none;
+  }
+  /* line 45, ../sass/responsive/_small_screens.sass */
+  #main #content, #main.nosidebar #content {
+    margin: 9px;
+  }
+
+  /* line 47, ../sass/responsive/_small_screens.sass */
+  .splitcontentleft, .splitcontentright {
+    float: none;
+    width: auto;
+  }
+
+  /* line 51, ../sass/responsive/_small_screens.sass */
+  .tabular p {
+    padding: 9px;
+  }
+  /* line 53, ../sass/responsive/_small_screens.sass */
+  .tabular p label {
+    display: block;
+    float: none;
+    margin-left: 0;
+    text-align: left;
+  }
 }
