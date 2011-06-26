@@ -1647,11 +1647,18 @@ table.attributes th {
     width: auto;
   }
 
-  /* line 51, ../sass/responsive/_small_screens.sass */
+  /* line 50, ../sass/responsive/_small_screens.sass */
+  .contextual {
+    float: none;
+    padding: 0;
+    white-space: normal;
+  }
+
+  /* line 56, ../sass/responsive/_small_screens.sass */
   .tabular p {
     padding: 9px;
   }
-  /* line 53, ../sass/responsive/_small_screens.sass */
+  /* line 58, ../sass/responsive/_small_screens.sass */
   .tabular p label {
     display: block;
     float: none;
