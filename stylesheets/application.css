@@ -1641,28 +1641,63 @@ table.attributes th {
     margin: 9px;
   }
 
-  /* line 47, ../sass/responsive/_small_screens.sass */
+  /* line 48, ../sass/responsive/_small_screens.sass */
   .splitcontentleft, .splitcontentright {
     float: none;
     width: auto;
   }
 
-  /* line 50, ../sass/responsive/_small_screens.sass */
+  /* line 51, ../sass/responsive/_small_screens.sass */
+  .box {
+    padding: 9px;
+  }
+
+  /* line 53, ../sass/responsive/_small_screens.sass */
   .contextual {
     float: none;
     padding: 0;
     white-space: normal;
   }
 
-  /* line 56, ../sass/responsive/_small_screens.sass */
+  /* line 59, ../sass/responsive/_small_screens.sass */
+  #content .tabs {
+    height: auto;
+    overflow: auto;
+  }
+  /* line 62, ../sass/responsive/_small_screens.sass */
+  #content .tabs ul {
+    width: auto;
+    position: relative;
+  }
+
+  /* line 65, ../sass/responsive/_small_screens.sass */
+  .tabs-buttons {
+    display: block;
+  }
+
+  /* line 70, ../sass/responsive/_small_screens.sass */
+  form em {
+    margin-left: 0;
+  }
+
+  /* line 73, ../sass/responsive/_small_screens.sass */
   .tabular p {
     padding: 9px;
   }
-  /* line 58, ../sass/responsive/_small_screens.sass */
+  /* line 75, ../sass/responsive/_small_screens.sass */
   .tabular p label {
     display: block;
     float: none;
     margin-left: 0;
     text-align: left;
+  }
+
+  /* line 81, ../sass/responsive/_small_screens.sass */
+  .tabular.settings p {
+    padding: 9px;
+  }
+  /* line 83, ../sass/responsive/_small_screens.sass */
+  .tabular.settings label {
+    margin-left: 0;
   }
 }

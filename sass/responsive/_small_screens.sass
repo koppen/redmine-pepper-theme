@@ -44,14 +44,31 @@ $spacing: $spacing/2
     +box-shadow(none)
     #content, &.nosidebar #content
       margin: $spacing
+
   .splitcontentleft, .splitcontentright
     float: none
     width: auto
+  .box
+    padding: $spacing
   .contextual
     float: none
     padding: 0
     white-space: normal // Allows wrapping
 
+  // Tabs
+  #content .tabs
+    height: auto
+    overflow: auto
+    ul
+      width: auto
+      position: relative
+  .tabs-buttons
+    display: block
+
+  // Forms
+  form
+    em
+      margin-left: 0
   .tabular
     p
       padding: $spacing
@@ -60,3 +77,8 @@ $spacing: $spacing/2
         float: none
         margin-left: 0
         text-align: left
+  .tabular.settings
+    p
+      padding: $spacing
+    label
+      margin-left: 0
