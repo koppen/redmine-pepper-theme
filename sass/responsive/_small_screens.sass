@@ -3,9 +3,21 @@ $spacing: $spacing/2
   body
     margin: 0
     min-width: 0
-  #account, #loggedas, #sidebar, #footer
+  #loggedas, #sidebar, #footer
     display: none
   #top-menu
+    #account
+      top: 45px
+      ul
+        float: right
+        width: auto
+        li
+          display: inline
+          width: auto
+        a
+          display: inline
+          text-align: right
+          padding: 1em
     ul
       +border-radius(0)
       +box-shadow(none)
@@ -28,7 +40,7 @@ $spacing: $spacing/2
             text-align: left
             width: auto
   #header
-    margin: $spacing*2 0
+    margin: $spacing*4 0 $spacing*2 0
     h1
       margin: $spacing
     #main-menu

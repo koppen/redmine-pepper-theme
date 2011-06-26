@@ -1542,11 +1542,31 @@ table.attributes th {
   }
 
   /* line 6, ../sass/responsive/_small_screens.sass */
-  #account, #loggedas, #sidebar, #footer {
+  #loggedas, #sidebar, #footer {
     display: none;
   }
 
   /* line 9, ../sass/responsive/_small_screens.sass */
+  #top-menu #account {
+    top: 45px;
+  }
+  /* line 11, ../sass/responsive/_small_screens.sass */
+  #top-menu #account ul {
+    float: right;
+    width: auto;
+  }
+  /* line 14, ../sass/responsive/_small_screens.sass */
+  #top-menu #account ul li {
+    display: inline;
+    width: auto;
+  }
+  /* line 17, ../sass/responsive/_small_screens.sass */
+  #top-menu #account ul a {
+    display: inline;
+    text-align: right;
+    padding: 1em;
+  }
+  /* line 21, ../sass/responsive/_small_screens.sass */
   #top-menu ul {
     -moz-border-radius: 0;
     -webkit-border-radius: 0;
@@ -1559,18 +1579,18 @@ table.attributes th {
     -o-box-shadow: none;
     box-shadow: none;
   }
-  /* line 12, ../sass/responsive/_small_screens.sass */
+  /* line 24, ../sass/responsive/_small_screens.sass */
   #top-menu ul li {
     width: 16.667%;
   }
-  /* line 14, ../sass/responsive/_small_screens.sass */
+  /* line 26, ../sass/responsive/_small_screens.sass */
   #top-menu ul li a {
     overflow: hidden;
     padding: 9px;
     text-align: center;
     text-overflow: ellipsis;
   }
-  /* line 19, ../sass/responsive/_small_screens.sass */
+  /* line 31, ../sass/responsive/_small_screens.sass */
   #top-menu ul li:first-child a {
     border-left: 0;
     -moz-border-radius: 0;
@@ -1580,7 +1600,7 @@ table.attributes th {
     -khtml-border-radius: 0;
     border-radius: 0;
   }
-  /* line 22, ../sass/responsive/_small_screens.sass */
+  /* line 34, ../sass/responsive/_small_screens.sass */
   #top-menu ul li:last-child a {
     border-right: 0;
     -moz-border-radius: 0;
@@ -1590,39 +1610,39 @@ table.attributes th {
     -khtml-border-radius: 0;
     border-radius: 0;
   }
-  /* line 25, ../sass/responsive/_small_screens.sass */
+  /* line 37, ../sass/responsive/_small_screens.sass */
   #top-menu ul li ul.projects {
     width: 200%;
   }
-  /* line 27, ../sass/responsive/_small_screens.sass */
+  /* line 39, ../sass/responsive/_small_screens.sass */
   #top-menu ul li ul.projects li {
     text-align: left;
     width: auto;
   }
 
-  /* line 30, ../sass/responsive/_small_screens.sass */
+  /* line 42, ../sass/responsive/_small_screens.sass */
   #header {
-    margin: 18px 0;
+    margin: 36px 0 18px 0;
   }
-  /* line 32, ../sass/responsive/_small_screens.sass */
+  /* line 44, ../sass/responsive/_small_screens.sass */
   #header h1 {
     margin: 9px;
   }
-  /* line 34, ../sass/responsive/_small_screens.sass */
+  /* line 46, ../sass/responsive/_small_screens.sass */
   #header #main-menu {
     margin: 0;
   }
-  /* line 36, ../sass/responsive/_small_screens.sass */
+  /* line 48, ../sass/responsive/_small_screens.sass */
   #header #quick-search {
     color: transparent;
     margin-right: 9px;
   }
-  /* line 39, ../sass/responsive/_small_screens.sass */
+  /* line 51, ../sass/responsive/_small_screens.sass */
   #header #quick-search a {
     display: none;
   }
 
-  /* line 41, ../sass/responsive/_small_screens.sass */
+  /* line 53, ../sass/responsive/_small_screens.sass */
   #main {
     border: 0;
     -moz-border-radius: 0;
@@ -1636,55 +1656,55 @@ table.attributes th {
     -o-box-shadow: none;
     box-shadow: none;
   }
-  /* line 45, ../sass/responsive/_small_screens.sass */
+  /* line 57, ../sass/responsive/_small_screens.sass */
   #main #content, #main.nosidebar #content {
     margin: 9px;
   }
 
-  /* line 48, ../sass/responsive/_small_screens.sass */
+  /* line 60, ../sass/responsive/_small_screens.sass */
   .splitcontentleft, .splitcontentright {
     float: none;
     width: auto;
   }
 
-  /* line 51, ../sass/responsive/_small_screens.sass */
+  /* line 63, ../sass/responsive/_small_screens.sass */
   .box {
     padding: 9px;
   }
 
-  /* line 53, ../sass/responsive/_small_screens.sass */
+  /* line 65, ../sass/responsive/_small_screens.sass */
   .contextual {
     float: none;
     padding: 0;
     white-space: normal;
   }
 
-  /* line 59, ../sass/responsive/_small_screens.sass */
+  /* line 71, ../sass/responsive/_small_screens.sass */
   #content .tabs {
     height: auto;
     overflow: auto;
   }
-  /* line 62, ../sass/responsive/_small_screens.sass */
+  /* line 74, ../sass/responsive/_small_screens.sass */
   #content .tabs ul {
     width: auto;
     position: relative;
   }
 
-  /* line 65, ../sass/responsive/_small_screens.sass */
+  /* line 77, ../sass/responsive/_small_screens.sass */
   .tabs-buttons {
     display: block;
   }
 
-  /* line 70, ../sass/responsive/_small_screens.sass */
+  /* line 82, ../sass/responsive/_small_screens.sass */
   form em {
     margin-left: 0;
   }
 
-  /* line 73, ../sass/responsive/_small_screens.sass */
+  /* line 85, ../sass/responsive/_small_screens.sass */
   .tabular p {
     padding: 9px;
   }
-  /* line 75, ../sass/responsive/_small_screens.sass */
+  /* line 87, ../sass/responsive/_small_screens.sass */
   .tabular p label {
     display: block;
     float: none;
@@ -1692,11 +1712,11 @@ table.attributes th {
     text-align: left;
   }
 
-  /* line 81, ../sass/responsive/_small_screens.sass */
+  /* line 93, ../sass/responsive/_small_screens.sass */
   .tabular.settings p {
     padding: 9px;
   }
-  /* line 83, ../sass/responsive/_small_screens.sass */
+  /* line 95, ../sass/responsive/_small_screens.sass */
   .tabular.settings label {
     margin-left: 0;
   }
