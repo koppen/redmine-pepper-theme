@@ -1,7 +1,7 @@
 Pepper - a Redmine theme
 ========================
 
-You develop great software. You use Redmine to manage your projects. Your Redmine instance should look at least as high tech and sleak as the software you develop.
+You develop great software. You use Redmine to manage your projects. Your Redmine instance should look at least as high tech and sleek as the software you develop.
 
 Pepper is a Redmine theme that looks professional, generic enough to be usable by most organizations, while not becoming bland or boring - fitting for any high tech software company.
 
@@ -31,7 +31,7 @@ While Pepper has been designed for modern browsers, thus looks its best in Chrom
 Installing
 ----------
 
-Using git, you can simply clone the theme into your Redmine theme dir like so:
+Using git, you can simply clone the theme into your Redmine theme directory like so:
 
     $ cd /path/to/redmine/public/themes
     $ git clone http://github.com/koppen/redmine-pepper-theme.git pepper
