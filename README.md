@@ -51,7 +51,19 @@ To build the final CSS:
 Never edit stylesheets/application.css as it will be overwritten by Compass.
 
 
+Screenshots
+-----------
+
+![Redmine homepage](/files/journal/pepper/pepper-homepage.png)
+![Project overview](/files/journal/pepper/pepper-project_overview.png)
+![Issues list](/files/journal/pepper/pepper-issue_list.png)
+![Issue](/files/journal/pepper/pepper-issue.png)
+![New issue](/files/journal/pepper/pepper-new_issue.png)
+![Administration settings](/files/journal/pepper/pepper-settings.png)
+
+
 License
 -------
 
 Pepper is licensed under the [Expat/MIT License](http://www.opensource.org/licenses/mit-license.php).
+
