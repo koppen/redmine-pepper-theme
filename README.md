@@ -49,3 +49,9 @@ To build the final CSS:
     $ compass compile
 
 Never edit stylesheets/application.css as it will be overwritten by Compass.
+
+
+License
+-------
+
+Pepper is licensed under the [Expat/MIT License](http://www.opensource.org/licenses/mit-license.php).
