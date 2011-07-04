@@ -976,8 +976,8 @@ p.subtitle {
 /* line 4, ../sass/_forms.sass */
 form em {
   display: block;
-  margin-left: 17%;
   font-size: 0.8em;
+  font-style: normal;
 }
 /* line 9, ../sass/_forms.sass */
 form p {
