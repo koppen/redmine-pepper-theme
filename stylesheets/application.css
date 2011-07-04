@@ -1077,7 +1077,7 @@ fieldset p {
 
 /* line 58, ../sass/_forms.sass */
 input[type=submit] {
-  margin: 18px 1em 18px 0;
+  margin: 9px 1em 9px 0;
   padding: 9px 18px;
 }
 
@@ -1521,6 +1521,10 @@ table.attributes th {
   border: 1px solid #e4e4ef;
   margin: 9px 0;
   padding: 18px;
+}
+/* line 66, ../sass/page_specific/_issues.sass */
+#update h3 {
+  margin-top: 0;
 }
 
 /* line 4, ../sass/page_specific/_reports.sass */
