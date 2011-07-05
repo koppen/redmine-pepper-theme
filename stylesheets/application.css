@@ -1538,6 +1538,23 @@ form .attributes th {
   text-transform: capitalize;
 }
 
+/* line 2, ../sass/page_specific/_roles.sass */
+#permissions fieldset {
+  margin-top: 18px;
+}
+/* line 4, ../sass/page_specific/_roles.sass */
+#permissions fieldset:first-child {
+  margin-top: 0;
+}
+/* line 6, ../sass/page_specific/_roles.sass */
+#permissions legend {
+  margin: 0;
+}
+/* line 8, ../sass/page_specific/_roles.sass */
+#permissions label.floating {
+  width: 33%;
+}
+
 /* line 1, ../sass/page_specific/_wiki.sass */
 .wiki h1 {
   border: 0;
