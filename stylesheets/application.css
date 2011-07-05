@@ -1002,7 +1002,7 @@ form input[type=checkbox] {
   margin: 6px 0.25em 6px 0;
 }
 /* line 21, ../sass/_forms.sass */
-form input[type=text], form textarea {
+form input[type=password], form input[type=text], form textarea {
   border: 1px solid #888888;
   -moz-border-radius: 2px;
   -webkit-border-radius: 2px;
@@ -1017,7 +1017,7 @@ form input[type=text], form textarea {
   padding: 4px;
 }
 /* line 26, ../sass/_forms.sass */
-form input[type=text]:focus, form input[type=text]:hover, form textarea:focus, form textarea:hover {
+form input[type=password]:focus, form input[type=password]:hover, form input[type=text]:focus, form input[type=text]:hover, form textarea:focus, form textarea:hover {
   border-color: #a2c2e2;
 }
 /* line 28, ../sass/_forms.sass */
