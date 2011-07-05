@@ -15,8 +15,9 @@ div.flash
   &.error, &.notice
     background-position: $spacing/2 50%
   &.error
-    background-color: transparent
-    color: $error_color
+    background-color: $error_color
+    color: adjust-lightness($error_color, 50%)
+    text-shadow: rgba(0,0,0,0.4) 0.1em 0.1em 0.1em
   &.notice
     background-color: adjust-lightness($success_color, 50%)
     color: $success_color

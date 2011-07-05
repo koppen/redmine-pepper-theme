@@ -438,21 +438,22 @@ div.flash.error, div.flash.notice {
 }
 /* line 17, ../sass/_general_classes.sass */
 div.flash.error {
-  background-color: transparent;
-  color: #dd0000;
+  background-color: #dd0000;
+  color: #ffdddd;
+  text-shadow: rgba(0, 0, 0, 0.4) 0.1em 0.1em 0.1em;
 }
-/* line 20, ../sass/_general_classes.sass */
+/* line 21, ../sass/_general_classes.sass */
 div.flash.notice {
   background-color: #d9f2d9;
   color: #339933;
 }
 
-/* line 24, ../sass/_general_classes.sass */
+/* line 25, ../sass/_general_classes.sass */
 .pagination {
   text-align: center;
 }
 
-/* line 27, ../sass/_general_classes.sass */
+/* line 28, ../sass/_general_classes.sass */
 p.subtitle {
   color: #888888;
   font-size: 0.9em;
@@ -460,38 +461,38 @@ p.subtitle {
   margin: 0;
 }
 
-/* line 33, ../sass/_general_classes.sass */
+/* line 34, ../sass/_general_classes.sass */
 .splitcontentleft, .splitcontentright {
   width: 48%;
 }
 
-/* line 35, ../sass/_general_classes.sass */
+/* line 36, ../sass/_general_classes.sass */
 .splitcontentleft {
   float: left;
 }
 
-/* line 37, ../sass/_general_classes.sass */
+/* line 38, ../sass/_general_classes.sass */
 .splitcontentright {
   float: right;
 }
 
-/* line 40, ../sass/_general_classes.sass */
+/* line 41, ../sass/_general_classes.sass */
 .contextual {
   float: right;
   font-size: inherit;
 }
 
-/* line 43, ../sass/_general_classes.sass */
+/* line 44, ../sass/_general_classes.sass */
 #content > .contextual {
   margin-top: 0.4em;
 }
 
-/* line 46, ../sass/_general_classes.sass */
+/* line 47, ../sass/_general_classes.sass */
 .nodata {
   color: #888888;
 }
 
-/* line 49, ../sass/_general_classes.sass */
+/* line 50, ../sass/_general_classes.sass */
 .tip {
   -moz-box-shadow: rgba(0, 0, 0, 0.5) 0 0 2em;
   -webkit-box-shadow: rgba(0, 0, 0, 0.5) 0 0 2em;
