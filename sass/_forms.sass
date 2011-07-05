@@ -14,11 +14,37 @@ form
   input
     margin: 2px 0
     max-width: 80%
+    &:focus
+      border-color: $link_hover_color
+  input[type=checkbox]
+    margin: ($form_element_padding + 2) 0.25em ($form_element_padding + 2) 0
+  input[type=text], textarea
+    border: 1px solid $meta_color
+    +border-radius($form_element_padding/2)
+    +box-shadow(inset rgba(0,0,0,0.2) 1px 1px 2px)
+    padding: $form_element_padding
+    &:focus, &:hover
+      border-color: $link_hover_color
+  select
+    margin: ($form_element_padding + 1) 0
+
+  // It would be nice if submit buttons had a class or a containing element
+  input[type=submit]
+    cursor: pointer
+    margin: $spacing/2 1em $spacing/2 0
+    padding: $spacing/2 $spacing
+    &:focus, &:hover
+      +box-shadow($link_hover_color 0 0 $spacing/2)
+  .box + input[type=submit]
+    font-weight: bold
 
 label
   font-weight: bold
   margin: 2px 0 2px 0
+  padding: $form_element_padding 0
   text-align: right
+  input[type=checkbox]
+    margin-top: $form_element_padding - 1
   &.block
     input[type=checkbox]
       margin-right: 0.5em
@@ -54,14 +80,6 @@ fieldset
     margin: 0
     padding: 0
 
-// It would be nice if submit buttons had a class or a containing element
-input[type=submit]
-  margin: $spacing/2 1em $spacing/2 0
-  padding: $spacing/2 $spacing
-
-.box + input[type=submit]
-  font-weight: bold
-
 .errorExplanation, .error
   color: $error_color
   h2
@@ -83,8 +101,7 @@ div.jstElements
     margin-right: 0
 div.jstEditor
   textarea
-    padding: 0.3%
-    width: 99%
+    width: 98%
 
 #attachments_fields
   display: block
