@@ -1,4 +1,5 @@
 #top-menu
+  +has-layout
   &:after
     // Clear any floats
     content: ''
@@ -8,7 +9,7 @@
 
   // Reset Redmine stuff
   background: none
-  font-size: inherit
+  font-size: 1em
   height: auto
   padding: 0
   position: relative
@@ -54,6 +55,7 @@
     +border-radius($outside_border_radius)
     float: left
     overflow: visible // Don't clip the project submenu
+
     li a
       // Colors for browsers without rgba support
       border-left: 1px solid #7e7e7e
@@ -110,19 +112,20 @@
   color: $text_color
   height: auto
   margin: $spacing*2 0 0 0
+  margin-bottom: $spacing
   padding: 0
   h1
     text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.9)
     margin: 0 $spacing
+    padding-top: 2px
   #main-menu
     float: left
-    margin-left: $spacing/2 // Aligns the first link with the heading, since the link has $spacing/2 padding-left
     margin-right: auto
     position: relative
     left: 0
     ul
       +navigation_list
-      margin-left: 0
+      margin-left: $spacing/2 // Aligns the first link with the heading, since the link has $spacing/2 padding-left
       li
         margin-right: 1px
       a
@@ -134,15 +137,14 @@
         &.selected
           font-weight: bold // Override Redmine default
   #quick-search
+    text-align: right
     form
+      display: block
       float: left
-      width: 225px
       width: $sidebar_width + $spacing*2
     a
       color: $text_color
       text-decoration: none
-    form
-      display: block
     input
       +border-radius(1em)
       border-top: 1px solid #848484
@@ -150,7 +152,8 @@
       border-bottom: 1px solid #e1e1e1
       border-left: 1px solid #c1c1c1
       +box-shadow(inset rgba(0,0,0,0.2) 1px 1px 2px)
-      float: right
+      display: inline
+      margin: 0
       padding: 0.2em 1em
     select
       // The Jump to project dropdown
@@ -163,7 +166,7 @@
   border: 1px solid $separator_color
   +border-radius($outside_border_radius)
   clear: both
-  margin: $spacing/2 0
+  margin: 0
   overflow: hidden
   #content
     background: #ffffff
