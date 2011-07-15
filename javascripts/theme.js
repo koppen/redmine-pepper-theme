@@ -32,17 +32,17 @@ ProjectMenuBuilder = {
     return projectList;
   },
 
-  buildListMenuItem: function(projectSelector) {
-    var menuItem = $(document.createElement('div'));
-    menuItem.addClassName('selector');
+  buildProjectSelector: function(selectElement) {
+    var selector = $(document.createElement('div'));
+    selector.addClassName('selector');
 
-    var title = ProjectMenuBuilder.getTitle(projectSelector);
-    menuItem.appendChild(ProjectMenuBuilder.buildToggle(title));
+    var title = ProjectMenuBuilder.getTitle(selectElement);
+    selector.appendChild(ProjectMenuBuilder.buildToggle(title));
 
-    var projectList = ProjectMenuBuilder.buildList(projectSelector);
-    menuItem.appendChild(projectList);
+    var projectList = ProjectMenuBuilder.buildList(selectElement);
+    selector.appendChild(projectList);
 
-    return menuItem;
+    return selector;
   },
 
   buildToggle: function(title) {
@@ -51,12 +51,6 @@ ProjectMenuBuilder = {
     toggle.addClassName('toggle');
     toggle.title = title;
     toggle.innerHTML = toggle.title.replace('...', '&hellip;');
-
-    $(toggle).observe('click', function(event) {
-      $(this).next('.projects').toggle();
-      $(this).toggleClassName('active');
-      event.stop();
-    });
 
     return toggle;
   },
@@ -76,17 +70,47 @@ ProjectMenuBuilder = {
     var title = element.childElements().first().innerHTML;
     return title;
   },
-  
+
+  bindEvents: function(selector) {
+    // Hook up events
+    selector.toggleProjects = function() {
+      $(this).down('.projects').toggle();
+      $(this).down('.toggle').toggleClassName('active');
+    };
+
+    // Display the project dropdown when the toggle is clicked
+    selector.down('.toggle').observe('click', function(event) {
+      selector.toggleProjects();
+      event.stop();
+    });
+
+    // Hide the dropdown again a short while after we've moved the mouse away
+    selector.down('.projects').observe('mouseout', function(event) {
+      selector.toggleTimer = new PeriodicalExecuter(function(pe) {
+        selector.toggleProjects();
+        pe.stop();
+      }, 1);
+    });
+
+    // Cancel the timer to hide the dropdown if we move the mouse back over the menu
+    selector.down('.projects').observe('mouseover', function(event) {
+      if (selector.toggleTimer) {
+        selector.toggleTimer.stop();
+      };
+    });
+  },
+
   // Creates a menu with links to all the users projects and adds it next to the project name
   moveProjectSelectorToProjectName: function(projectSelector, projectName) {
     if (!projectSelector || !projectName) {
       return false;
     }
 
-    var menuItem = ProjectMenuBuilder.buildListMenuItem(projectSelector);
+    var selector = ProjectMenuBuilder.buildProjectSelector(projectSelector);
+    ProjectMenuBuilder.bindEvents(selector);
 
-    // Insert the menu item as the first in top menu
-    projectName.insert({ bottom: menuItem });
+    // Insert the project selector after the project name
+    projectName.insert({ bottom: selector });
 
     // Remove the original select list
     projectSelector.hide();
