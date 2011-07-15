@@ -1,3 +1,43 @@
+@mixin navigation
+  +navigation_list
+  +clearfix
+  +box-shadow(rgba(0,0,0,0.2) 1px 1px 4px)
+  +background(#666666 linear-gradient(top, #777777, #444444))
+  +border-radius($outside_border_radius)
+  float: left
+  overflow: visible // Don't clip the project submenu
+
+  li a
+    // Colors for browsers without rgba support
+    border-left: 1px solid #7e7e7e
+    border-top: 1px solid #7e7e7e
+    border-right: 1px solid #424242
+    border-bottom: 1px solid #424242
+    // Colors for proper browsers
+    border-left: 1px solid rgba(200,200,200,0.3)
+    border-top: 1px solid rgba(200,200,200,0.3)
+    border-right: 1px solid rgba(0,0,0,0.3)
+    border-bottom: 1px solid rgba(0,0,0,0.3)
+    padding: $spacing/2 $spacing
+  li:first-child a
+    +border-left-radius($outside_border_radius)
+  li:last-child a
+    +border-right-radius($outside_border_radius)
+  a
+    color: #ffffff
+    text-decoration: none
+    text-shadow: rgba(0,0,0,0.5) 1px 1px 1px
+    &:hover
+      text-decoration: underline
+    &.active, &:active
+      // For when a menu item with a submenu has been clicked
+      border-left: 1px solid rgba(0,0,0,0.3)
+      border-top: 1px solid rgba(0,0,0,0.3)
+      border-right: 1px solid rgba(200,200,200,0.3)
+      border-bottom: 1px solid rgba(200,200,200,0.3)
+      +box-shadow(rgba(0,0,0,0.5) 0 0 1em inset)
+
+
 #top-menu
   +has-layout
   &:after
@@ -47,65 +87,55 @@
     margin-right: inherit
     a
       color: $link_color
+
   ul
-    +navigation_list
-    +clearfix
-    +box-shadow(rgba(0,0,0,0.2) 1px 1px 4px)
-    +background(#666666 linear-gradient(top, #777777, #444444))
-    +border-radius($outside_border_radius)
-    float: left
-    overflow: visible // Don't clip the project submenu
+    +navigation
 
-    li a
-      // Colors for browsers without rgba support
-      border-left: 1px solid #7e7e7e
-      border-top: 1px solid #7e7e7e
-      border-right: 1px solid #424242
-      border-bottom: 1px solid #424242
-      // Colors for proper browsers
-      border-left: 1px solid rgba(200,200,200,0.3)
-      border-top: 1px solid rgba(200,200,200,0.3)
-      border-right: 1px solid rgba(0,0,0,0.3)
-      border-bottom: 1px solid rgba(0,0,0,0.3)
-      padding: $spacing/2 $spacing
-    li:first-child a
-      +border-left-radius($outside_border_radius)
-    li:last-child a
-      +border-right-radius($outside_border_radius)
-    a
-      color: #ffffff
-      text-decoration: none
-      text-shadow: rgba(0,0,0,0.5) 1px 1px 1px
-      &:hover
-        text-decoration: underline
-      &.active, &:active
-        // For when a menu item with a submenu has been clicked
-        border-left: 1px solid rgba(0,0,0,0.3)
-        border-top: 1px solid rgba(0,0,0,0.3)
-        border-right: 1px solid rgba(200,200,200,0.3)
-        border-bottom: 1px solid rgba(200,200,200,0.3)
-        +box-shadow(rgba(0,0,0,0.5) 0 0 1em inset)
+// Submenu for project selection
+.selector
+  +navigation
+  display: inline-block
+  float: none
+  font-size: 12px
+  font-weight: normal
+  letter-spacing: 0
+  line-height: 1.96em
+  margin-left: $spacing/4
+  position: relative
+  text-shadow: none
+  vertical-align: bottom
+  a:active, a.active
+    border: 0
+    box-shadow: none
+  .toggle
+    background: url(../images/iconic/arrow_down_12x12.png) 50% 50% no-repeat
+    height: 1.96em
+    text-indent: -999em
+    color: black
+    display: block
+    padding: 0
+    width: 1.96em
+  ul.projects
+    +navigation
+    +box-shadow(rgba(0,0,0,0.5) 0 0 $spacing/2)
+    border: 0
+    float: none
+    margin: 0
+    overflow: hidden
+    padding: 0
+    position: absolute
+    top: 0
+    left: 0
+    z-index: 999 // Display on top of other content
+    li
+      float: none
+      a
+        +border-radius(0)
+        white-space: nowrap
+      .selected:before
+        content: '✔ '
 
-    // Submenu for project selection
-    ul.projects
-      +box-shadow(rgba(0,0,0,0.5) 0 0 $spacing/2)
-      +border-top-radius(0)
-      border: 0
-      margin: 0
-      overflow: hidden
-      padding: 0
-      position: absolute
-      top: 38px
-      left: 0px
-      z-index: 999 // Display on top of other content
-      li
-        float: none
-        a
-          +border-radius(0)
-        .selected:before
-          content: '✔ '
-      li:last-child a
-        +border-bottom-radius($outside_border_radius)
+
 
 #header
   background: none
@@ -114,6 +144,7 @@
   margin: $spacing*2 0 0 0
   margin-bottom: $spacing
   padding: 0
+
   h1
     text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.9)
     margin: 0 $spacing

@@ -33,7 +33,8 @@ ProjectMenuBuilder = {
   },
 
   buildListMenuItem: function(projectSelector) {
-    var menuItem = $(document.createElement('li'));
+    var menuItem = $(document.createElement('div'));
+    menuItem.addClassName('selector');
 
     var title = ProjectMenuBuilder.getTitle(projectSelector);
     menuItem.appendChild(ProjectMenuBuilder.buildToggle(title));
@@ -47,10 +48,12 @@ ProjectMenuBuilder = {
   buildToggle: function(title) {
     var toggle = $(document.createElement('a'));
     toggle.href = '#'; // Makes it behave like a real link
-    toggle.innerHTML = title.replace('...', '&hellip;');
+    toggle.addClassName('toggle');
+    toggle.title = title;
+    toggle.innerHTML = toggle.title.replace('...', '&hellip;');
 
     $(toggle).observe('click', function(event) {
-      $(this).up('li').down('.projects').toggle();
+      $(this).next('.projects').toggle();
       $(this).toggleClassName('active');
       event.stop();
     });
@@ -74,20 +77,16 @@ ProjectMenuBuilder = {
     return title;
   },
   
-  // Creates a ul with links to all the users projects and add it to the top menu
-  moveProjectSelectorToTopMenu: function(projectSelector, topMenuList) {
-    if (!projectSelector || !topMenuList) {
+  // Creates a menu with links to all the users projects and adds it next to the project name
+  moveProjectSelectorToProjectName: function(projectSelector, projectName) {
+    if (!projectSelector || !projectName) {
       return false;
     }
 
     var menuItem = ProjectMenuBuilder.buildListMenuItem(projectSelector);
 
     // Insert the menu item as the first in top menu
-    $(topMenuList).insert({ top: menuItem });
-
-    // Make the projectList at least as wide as the menu item
-    var width = menuItem.getWidth();
-    $(menuItem).down('.projects').setStyle({ minWidth: width + 'px' });
+    projectName.insert({ bottom: menuItem });
 
     // Remove the original select list
     projectSelector.hide();
@@ -95,11 +94,14 @@ ProjectMenuBuilder = {
 };
 
 document.observe("dom:loaded", function() {
-  ProjectMenuBuilder.moveProjectSelectorToTopMenu(
+  try {
+  ProjectMenuBuilder.moveProjectSelectorToProjectName(
     $$('#quick-search select').first(),
-    $$('#wrapper #top-menu > ul').first()
+    $$('#header h1').first()
   );
-
+} catch (error) {
+  console.error(error)
+}
   injectViewportMetaTag();
 });
 

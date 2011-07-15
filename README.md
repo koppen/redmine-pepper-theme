@@ -62,8 +62,13 @@ Screenshots
 ![Administration settings](http://mentalized.net/files/journal/pepper/pepper-settings.png)
 
 
+Credits
+-------
+
+* Includes icons from the Iconic iconset by P.J. Onori: [http://somerandomdude.com/projects/iconic](http://somerandomdude.com/projects/iconic/)
+
+
 License
 -------
 
 Pepper is licensed under the [Expat/MIT License](http://www.opensource.org/licenses/mit-license.php).
-
