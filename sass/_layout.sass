@@ -101,16 +101,18 @@
   letter-spacing: 0
   position: relative
   text-shadow: none
-  a:active, a.active
-    border: 0
-    box-shadow: none
   .toggle
-    background: url(../images/iconic/arrow_down_12x12.png) 50% 50% no-repeat
+    background: url(../images/iconic/gray_light/arrow_down_12x12.png) 50% 50% no-repeat
     height: $selector_height
     text-indent: -999em
     display: block
     padding: 0
     width: $selector_height // Square
+  .toggle:active, .toggle:hover, a:active, a.active
+    background-image: url(../images/iconic/white/arrow_down_12x12.png)
+    border: 0
+    box-shadow: none
+
   ul.projects
     +navigation
     +box-shadow(rgba(0,0,0,0.5) 0 0 $spacing/2)
