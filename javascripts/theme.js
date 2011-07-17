@@ -82,7 +82,7 @@ ProjectMenuBuilder = {
     };
 
     selector.hideProjects = function() {
-      $(this).down('.projects').hide()
+      $(this).down('.projects').hide();
       $(this).down('.toggle').removeClassName('active');
     };
 
