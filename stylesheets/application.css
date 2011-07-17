@@ -791,17 +791,16 @@ p.subtitle {
   -o-box-shadow: rgba(0, 0, 0, 0.5) 0 0 1em inset;
   box-shadow: rgba(0, 0, 0, 0.5) 0 0 1em inset;
 }
-/* line 103, ../sass/_layout.sass */
+/* line 104, ../sass/_layout.sass */
 .project_selector a:active, .project_selector a.active {
   border: 0;
   box-shadow: none;
 }
-/* line 106, ../sass/_layout.sass */
+/* line 107, ../sass/_layout.sass */
 .project_selector .toggle {
   background: url(../images/iconic/arrow_down_12x12.png) 50% 50% no-repeat;
   height: 1.96em;
   text-indent: -999em;
-  color: black;
   display: block;
   padding: 0;
   width: 1.96em;
@@ -843,7 +842,7 @@ p.subtitle {
   overflow: hidden;
   padding: 0;
   position: absolute;
-  top: 0;
+  top: 1.96em;
   left: 0;
   z-index: 999;
 }
