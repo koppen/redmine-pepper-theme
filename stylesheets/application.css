@@ -2002,4 +2002,9 @@ form .attributes th {
     border: none;
     margin: 18px 0 9px 0;
   }
+
+  /* line 102, ../sass/responsive/_small_screens.sass */
+  .controller-issues #content .contextual:first-child {
+    display: none;
+  }
 }
