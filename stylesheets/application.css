@@ -1926,51 +1926,55 @@ form .attributes th {
   #main #content, #main.nosidebar #content {
     margin: 9px;
   }
-
   /* line 49, ../sass/responsive/_small_screens.sass */
+  #main h2 {
+    margin: 1em 0 9px 0;
+  }
+
+  /* line 52, ../sass/responsive/_small_screens.sass */
   .splitcontentleft, .splitcontentright {
     float: none;
     width: auto;
   }
 
-  /* line 52, ../sass/responsive/_small_screens.sass */
+  /* line 55, ../sass/responsive/_small_screens.sass */
   .box {
     padding: 9px;
   }
 
-  /* line 54, ../sass/responsive/_small_screens.sass */
+  /* line 57, ../sass/responsive/_small_screens.sass */
   .contextual {
     float: none;
     padding: 0;
     white-space: normal;
   }
 
-  /* line 60, ../sass/responsive/_small_screens.sass */
+  /* line 63, ../sass/responsive/_small_screens.sass */
   #content .tabs {
     height: auto;
     overflow: auto;
   }
-  /* line 63, ../sass/responsive/_small_screens.sass */
+  /* line 66, ../sass/responsive/_small_screens.sass */
   #content .tabs ul {
     width: auto;
     position: relative;
   }
 
-  /* line 66, ../sass/responsive/_small_screens.sass */
+  /* line 69, ../sass/responsive/_small_screens.sass */
   .tabs-buttons {
     display: block;
   }
 
-  /* line 71, ../sass/responsive/_small_screens.sass */
+  /* line 74, ../sass/responsive/_small_screens.sass */
   form em {
     margin-left: 0;
   }
 
-  /* line 74, ../sass/responsive/_small_screens.sass */
+  /* line 77, ../sass/responsive/_small_screens.sass */
   .tabular p {
     padding: 9px;
   }
-  /* line 76, ../sass/responsive/_small_screens.sass */
+  /* line 79, ../sass/responsive/_small_screens.sass */
   .tabular p label {
     display: block;
     float: none;
@@ -1978,32 +1982,32 @@ form .attributes th {
     text-align: left;
   }
 
-  /* line 82, ../sass/responsive/_small_screens.sass */
+  /* line 85, ../sass/responsive/_small_screens.sass */
   .tabular.settings p {
     padding: 9px;
   }
-  /* line 84, ../sass/responsive/_small_screens.sass */
+  /* line 87, ../sass/responsive/_small_screens.sass */
   .tabular.settings label {
     margin-left: 0;
   }
 
-  /* line 89, ../sass/responsive/_small_screens.sass */
+  /* line 92, ../sass/responsive/_small_screens.sass */
   .action-login #wrapper, .action-lost_password #wrapper {
     width: auto;
   }
-  /* line 91, ../sass/responsive/_small_screens.sass */
+  /* line 94, ../sass/responsive/_small_screens.sass */
   .action-login #top-menu, .action-lost_password #top-menu {
     margin-right: 9px;
   }
 
-  /* line 95, ../sass/responsive/_small_screens.sass */
+  /* line 98, ../sass/responsive/_small_screens.sass */
   #login-form table {
     background: none;
     border: none;
     margin: 18px 0 9px 0;
   }
 
-  /* line 102, ../sass/responsive/_small_screens.sass */
+  /* line 105, ../sass/responsive/_small_screens.sass */
   .controller-issues #content .contextual:first-child {
     display: none;
   }
