@@ -71,11 +71,24 @@ ProjectMenuBuilder = {
     return title;
   },
 
+  // Hook up events
   bindEvents: function(selector) {
-    // Hook up events
     selector.toggleProjects = function() {
-      $(this).down('.projects').toggle();
-      $(this).down('.toggle').toggleClassName('active');
+      if ($(this).down('.projects').visible()) {
+        this.hideProjects();
+      } else {
+        this.showProjects();
+      };
+    };
+
+    selector.hideProjects = function() {
+      $(this).down('.projects').hide()
+      $(this).down('.toggle').removeClassName('active');
+    };
+
+    selector.showProjects = function() {
+      $(this).down('.projects').show();
+      $(this).down('.toggle').addClassName('active');
     };
 
     // Display the project dropdown when the toggle is clicked
@@ -87,7 +100,7 @@ ProjectMenuBuilder = {
     // Hide the dropdown again a short while after we've moved the mouse away
     selector.down('.projects').observe('mouseout', function(event) {
       selector.toggleTimer = new PeriodicalExecuter(function(pe) {
-        selector.toggleProjects();
+        selector.hideProjects();
         pe.stop();
       }, 1);
     });
