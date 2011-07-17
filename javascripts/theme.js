@@ -34,7 +34,7 @@ ProjectMenuBuilder = {
 
   buildProjectSelector: function(selectElement) {
     var selector = $(document.createElement('div'));
-    selector.addClassName('selector');
+    selector.addClassName('project_selector');
 
     var title = ProjectMenuBuilder.getTitle(selectElement);
     selector.appendChild(ProjectMenuBuilder.buildToggle(title));
@@ -110,7 +110,7 @@ ProjectMenuBuilder = {
     ProjectMenuBuilder.bindEvents(selector);
 
     // Insert the project selector after the project name
-    projectName.insert({ bottom: selector });
+    projectName.insert({ after: selector });
 
     // Remove the original select list
     projectSelector.hide();
@@ -118,14 +118,10 @@ ProjectMenuBuilder = {
 };
 
 document.observe("dom:loaded", function() {
-  try {
   ProjectMenuBuilder.moveProjectSelectorToProjectName(
     $$('#quick-search select').first(),
     $$('#header h1').first()
   );
-} catch (error) {
-  console.error(error)
-}
   injectViewportMetaTag();
 });
 

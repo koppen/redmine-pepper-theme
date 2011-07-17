@@ -92,18 +92,14 @@
     +navigation
 
 // Submenu for project selection
-.selector
+.project_selector
   +navigation
-  display: inline-block
-  float: none
+  float: left
   font-size: 12px
   font-weight: normal
   letter-spacing: 0
-  line-height: 1.96em
-  margin-left: $spacing/4
   position: relative
   text-shadow: none
-  vertical-align: bottom
   a:active, a.active
     border: 0
     box-shadow: none
@@ -135,21 +131,19 @@
       .selected:before
         content: '✔ '
 
-
-
 #header
   background: none
   color: $text_color
   height: auto
-  margin: $spacing*2 0 0 0
-  margin-bottom: $spacing
+  margin: $spacing*2 0 $spacing/4 0
   padding: 0
-
   h1
+    float: left
+    margin: 0 $spacing/4 0 $spacing
+    padding: $spacing/4 0
     text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.9)
-    margin: 0 $spacing
-    padding-top: 2px
   #main-menu
+    clear: both
     float: left
     margin-right: auto
     position: relative
