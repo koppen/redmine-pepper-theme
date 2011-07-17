@@ -1,28 +1,20 @@
 $spacing: $spacing/2
 @media all and (max-device-width: 767px), all and (max-width: 449px)
   body
+    font-size: 1em
     margin: 0
     min-width: 0
   #loggedas, #sidebar, #footer
     display: none
   #top-menu
     #account
-      top: 45px
-      ul
-        float: right
-        width: auto
-        li
-          display: inline
-          width: auto
-        a
-          display: inline
-          text-align: right
-          padding: 1em
+      display: none
     ul
       +border-radius(0)
       +box-shadow(none)
+      width: 100%
       li
-        width: 16.666666666%
+        width: 20%
         a
           overflow: hidden
           padding: $spacing
@@ -34,15 +26,12 @@ $spacing: $spacing/2
         &:last-child a
           border-right: 0
           +border-radius(0)
-        ul.projects
-          width: 200% // Relative to parent menu item
-          li
-            text-align: left
-            width: auto
   #header
     margin: $spacing*4 0 $spacing*2 0
     h1
       margin: $spacing
+    .project_selector
+      margin-top: $spacing
     #main-menu
       margin: 0
     #quick-search

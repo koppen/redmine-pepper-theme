@@ -1822,36 +1822,21 @@ form .attributes th {
 @media all and (max-device-width: 767px), all and (max-width: 449px) {
   /* line 3, ../sass/responsive/_small_screens.sass */
   body {
+    font-size: 1em;
     margin: 0;
     min-width: 0;
   }
 
-  /* line 6, ../sass/responsive/_small_screens.sass */
+  /* line 7, ../sass/responsive/_small_screens.sass */
   #loggedas, #sidebar, #footer {
     display: none;
   }
 
-  /* line 9, ../sass/responsive/_small_screens.sass */
+  /* line 10, ../sass/responsive/_small_screens.sass */
   #top-menu #account {
-    top: 45px;
+    display: none;
   }
-  /* line 11, ../sass/responsive/_small_screens.sass */
-  #top-menu #account ul {
-    float: right;
-    width: auto;
-  }
-  /* line 14, ../sass/responsive/_small_screens.sass */
-  #top-menu #account ul li {
-    display: inline;
-    width: auto;
-  }
-  /* line 17, ../sass/responsive/_small_screens.sass */
-  #top-menu #account ul a {
-    display: inline;
-    text-align: right;
-    padding: 1em;
-  }
-  /* line 21, ../sass/responsive/_small_screens.sass */
+  /* line 12, ../sass/responsive/_small_screens.sass */
   #top-menu ul {
     -moz-border-radius: 0;
     -webkit-border-radius: 0;
@@ -1863,19 +1848,20 @@ form .attributes th {
     -webkit-box-shadow: none;
     -o-box-shadow: none;
     box-shadow: none;
+    width: 100%;
   }
-  /* line 24, ../sass/responsive/_small_screens.sass */
+  /* line 16, ../sass/responsive/_small_screens.sass */
   #top-menu ul li {
-    width: 16.667%;
+    width: 20%;
   }
-  /* line 26, ../sass/responsive/_small_screens.sass */
+  /* line 18, ../sass/responsive/_small_screens.sass */
   #top-menu ul li a {
     overflow: hidden;
     padding: 9px;
     text-align: center;
     text-overflow: ellipsis;
   }
-  /* line 31, ../sass/responsive/_small_screens.sass */
+  /* line 23, ../sass/responsive/_small_screens.sass */
   #top-menu ul li:first-child a {
     border-left: 0;
     -moz-border-radius: 0;
@@ -1885,7 +1871,7 @@ form .attributes th {
     -khtml-border-radius: 0;
     border-radius: 0;
   }
-  /* line 34, ../sass/responsive/_small_screens.sass */
+  /* line 26, ../sass/responsive/_small_screens.sass */
   #top-menu ul li:last-child a {
     border-right: 0;
     -moz-border-radius: 0;
@@ -1895,39 +1881,34 @@ form .attributes th {
     -khtml-border-radius: 0;
     border-radius: 0;
   }
-  /* line 37, ../sass/responsive/_small_screens.sass */
-  #top-menu ul li ul.projects {
-    width: 200%;
-  }
-  /* line 39, ../sass/responsive/_small_screens.sass */
-  #top-menu ul li ul.projects li {
-    text-align: left;
-    width: auto;
-  }
 
-  /* line 42, ../sass/responsive/_small_screens.sass */
+  /* line 29, ../sass/responsive/_small_screens.sass */
   #header {
     margin: 36px 0 18px 0;
   }
-  /* line 44, ../sass/responsive/_small_screens.sass */
+  /* line 31, ../sass/responsive/_small_screens.sass */
   #header h1 {
     margin: 9px;
   }
-  /* line 46, ../sass/responsive/_small_screens.sass */
+  /* line 33, ../sass/responsive/_small_screens.sass */
+  #header .project_selector {
+    margin-top: 9px;
+  }
+  /* line 35, ../sass/responsive/_small_screens.sass */
   #header #main-menu {
     margin: 0;
   }
-  /* line 48, ../sass/responsive/_small_screens.sass */
+  /* line 37, ../sass/responsive/_small_screens.sass */
   #header #quick-search {
     color: transparent;
     margin-right: 9px;
   }
-  /* line 51, ../sass/responsive/_small_screens.sass */
+  /* line 40, ../sass/responsive/_small_screens.sass */
   #header #quick-search a {
     display: none;
   }
 
-  /* line 53, ../sass/responsive/_small_screens.sass */
+  /* line 42, ../sass/responsive/_small_screens.sass */
   #main {
     border: 0;
     -moz-border-radius: 0;
@@ -1941,55 +1922,55 @@ form .attributes th {
     -o-box-shadow: none;
     box-shadow: none;
   }
-  /* line 57, ../sass/responsive/_small_screens.sass */
+  /* line 46, ../sass/responsive/_small_screens.sass */
   #main #content, #main.nosidebar #content {
     margin: 9px;
   }
 
-  /* line 60, ../sass/responsive/_small_screens.sass */
+  /* line 49, ../sass/responsive/_small_screens.sass */
   .splitcontentleft, .splitcontentright {
     float: none;
     width: auto;
   }
 
-  /* line 63, ../sass/responsive/_small_screens.sass */
+  /* line 52, ../sass/responsive/_small_screens.sass */
   .box {
     padding: 9px;
   }
 
-  /* line 65, ../sass/responsive/_small_screens.sass */
+  /* line 54, ../sass/responsive/_small_screens.sass */
   .contextual {
     float: none;
     padding: 0;
     white-space: normal;
   }
 
-  /* line 71, ../sass/responsive/_small_screens.sass */
+  /* line 60, ../sass/responsive/_small_screens.sass */
   #content .tabs {
     height: auto;
     overflow: auto;
   }
-  /* line 74, ../sass/responsive/_small_screens.sass */
+  /* line 63, ../sass/responsive/_small_screens.sass */
   #content .tabs ul {
     width: auto;
     position: relative;
   }
 
-  /* line 77, ../sass/responsive/_small_screens.sass */
+  /* line 66, ../sass/responsive/_small_screens.sass */
   .tabs-buttons {
     display: block;
   }
 
-  /* line 82, ../sass/responsive/_small_screens.sass */
+  /* line 71, ../sass/responsive/_small_screens.sass */
   form em {
     margin-left: 0;
   }
 
-  /* line 85, ../sass/responsive/_small_screens.sass */
+  /* line 74, ../sass/responsive/_small_screens.sass */
   .tabular p {
     padding: 9px;
   }
-  /* line 87, ../sass/responsive/_small_screens.sass */
+  /* line 76, ../sass/responsive/_small_screens.sass */
   .tabular p label {
     display: block;
     float: none;
@@ -1997,25 +1978,25 @@ form .attributes th {
     text-align: left;
   }
 
-  /* line 93, ../sass/responsive/_small_screens.sass */
+  /* line 82, ../sass/responsive/_small_screens.sass */
   .tabular.settings p {
     padding: 9px;
   }
-  /* line 95, ../sass/responsive/_small_screens.sass */
+  /* line 84, ../sass/responsive/_small_screens.sass */
   .tabular.settings label {
     margin-left: 0;
   }
 
-  /* line 100, ../sass/responsive/_small_screens.sass */
+  /* line 89, ../sass/responsive/_small_screens.sass */
   .action-login #wrapper, .action-lost_password #wrapper {
     width: auto;
   }
-  /* line 102, ../sass/responsive/_small_screens.sass */
+  /* line 91, ../sass/responsive/_small_screens.sass */
   .action-login #top-menu, .action-lost_password #top-menu {
     margin-right: 9px;
   }
 
-  /* line 106, ../sass/responsive/_small_screens.sass */
+  /* line 95, ../sass/responsive/_small_screens.sass */
   #login-form table {
     background: none;
     border: none;
