@@ -98,7 +98,7 @@ ProjectMenuBuilder = {
     });
 
     // Hide the dropdown again a short while after we've moved the mouse away
-    selector.down('.projects').observe('mouseout', function(event) {
+    selector.observe('mouseout', function(event) {
       selector.toggleTimer = new PeriodicalExecuter(function(pe) {
         selector.hideProjects();
         pe.stop();
@@ -106,7 +106,7 @@ ProjectMenuBuilder = {
     });
 
     // Cancel the timer to hide the dropdown if we move the mouse back over the menu
-    selector.down('.projects').observe('mouseover', function(event) {
+    selector.observe('mouseover', function(event) {
       if (selector.toggleTimer) {
         selector.toggleTimer.stop();
       };
