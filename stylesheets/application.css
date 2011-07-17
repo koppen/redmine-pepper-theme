@@ -801,7 +801,7 @@ p.subtitle {
   width: 1.96em;
 }
 /* line 111, ../sass/_layout.sass */
-.project_selector .toggle:active, .project_selector .toggle:hover, .project_selector a:active, .project_selector a.active {
+.project_selector .toggle:active, .project_selector .toggle:hover, .project_selector a.toggle:active, .project_selector a.active {
   background-image: url(../images/iconic/white/arrow_down_12x12.png);
   border: 0;
   box-shadow: none;
