@@ -1449,6 +1449,15 @@ form fieldset table {
   margin: 0;
 }
 
+/* line 158, ../sass/_forms.sass */
+.splitcontentleft fieldset, .splitcontentright fieldset {
+  margin: 0 0 18px 0;
+}
+/* line 160, ../sass/_forms.sass */
+.splitcontentleft fieldset legend, .splitcontentright fieldset legend {
+  margin-top: 0;
+}
+
 /* line 6, ../sass/_tabs.sass */
 #content .tabs {
   background: #e1e1e3;
