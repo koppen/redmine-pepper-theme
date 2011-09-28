@@ -1316,22 +1316,25 @@ form fieldset table {
 }
 /* line 10, ../sass/page_specific/_account.sass */
 .action-login #top-menu, .action-lost_password #top-menu {
-  float: right;
   margin-right: 18px;
   padding: 0;
 }
-/* line 14, ../sass/page_specific/_account.sass */
+/* line 13, ../sass/page_specific/_account.sass */
 .action-login #top-menu #account, .action-lost_password #top-menu #account {
   float: right;
   position: relative;
   width: auto;
 }
-/* line 18, ../sass/page_specific/_account.sass */
+/* line 17, ../sass/page_specific/_account.sass */
 .action-login #top-menu #account ul, .action-lost_password #top-menu #account ul {
   width: auto;
 }
+/* line 19, ../sass/page_specific/_account.sass */
+.action-login #top-menu #account ul li a, .action-lost_password #top-menu #account ul li a {
+  padding-left: 1em;
+}
 
-/* line 22, ../sass/page_specific/_account.sass */
+/* line 23, ../sass/page_specific/_account.sass */
 #login-form table {
   background: none;
   border: none;
