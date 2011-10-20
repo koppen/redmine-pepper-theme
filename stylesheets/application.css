@@ -1352,6 +1352,27 @@ form fieldset table {
   margin-left: 1em;
 }
 
+/* line 1, ../sass/page_specific/_boards.sass */
+table.messages {
+  margin: 1em 0;
+}
+/* line 3, ../sass/page_specific/_boards.sass */
+table.messages th.subject {
+  padding-left: 20px;
+}
+/* line 5, ../sass/page_specific/_boards.sass */
+table.messages td {
+  color: inherit;
+  font-size: inherit;
+  margin: inherit;
+  text-align: left;
+  vertical-align: middle;
+}
+/* line 11, ../sass/page_specific/_boards.sass */
+table.messages tr.message td.subject {
+  background-position: 0 50%;
+}
+
 /* line 3, ../sass/page_specific/_calendars.sass */
 .controller-calendars table.cal td {
   border: 1px solid #e4e4ef;
