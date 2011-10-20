@@ -1,5 +1,5 @@
 @import url(../../../stylesheets/application.css);
-@import url(http://fonts.googleapis.com/css?family=Droid+Sans:regular,bold);
+@import url("//fonts.googleapis.com/css?family=Droid+Sans:regular,bold");
 /* line 1, ../sass/_general_elements.sass */
 body {
   background: #f0f5fe url(../images/body_noise.gif);
