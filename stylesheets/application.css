@@ -74,81 +74,28 @@ h3 {
 }
 
 /* line 50, ../sass/_general_elements.sass */
-table {
-  border-collapse: collapse;
-  width: 100%;
-}
-
-/* line 53, ../sass/_general_elements.sass */
-th, td {
-  padding: 0.2em 0.5em;
-}
-
-/* line 56, ../sass/_general_elements.sass */
-td p {
-  margin: 0;
-}
-
-/* line 58, ../sass/_general_elements.sass */
-th {
-  text-align: left;
-}
-
-/* line 61, ../sass/_general_elements.sass */
-table .checkbox {
-  padding: 0.2em;
-  text-align: center;
-}
-/* line 64, ../sass/_general_elements.sass */
-table .checkbox input {
-  float: none;
-  margin-right: 0;
-}
-
-/* line 67, ../sass/_general_elements.sass */
-table.list {
-  border: 0;
-}
-/* line 69, ../sass/_general_elements.sass */
-table.list th {
-  background: #e4e4ef;
-}
-/* line 71, ../sass/_general_elements.sass */
-table.list tr, table.list th, table.list td {
-  border-bottom: 1px solid #e4e4ef;
-}
-/* line 73, ../sass/_general_elements.sass */
-table.list tr.odd, table.list tr.even {
-  background: inherit;
-}
-/* line 75, ../sass/_general_elements.sass */
-table.list td.id {
-  text-align: left;
-}
-
-/* line 77, ../sass/_general_elements.sass */
 hr {
   border: none;
   border-top: 1px solid #e4e4ef;
 }
 
-/* line 82, ../sass/_general_elements.sass */
+/* line 55, ../sass/_general_elements.sass */
 #sidebar h2, #sidebar h3 {
   color: #333333;
 }
-/* line 84, ../sass/_general_elements.sass */
+/* line 57, ../sass/_general_elements.sass */
 #sidebar p {
   clear: both;
 }
 
-/* line 90, ../sass/_general_elements.sass */
+/* line 63, ../sass/_general_elements.sass */
 #header h1 a.root,
 #header h1 a.ancestor {
   color: #999999;
   font-size: 1em;
   text-decoration: none;
 }
-/* line 95, ../sass/_general_elements.sass */
+/* line 68, ../sass/_general_elements.sass */
 #header h1 a.root:hover,
 #header h1 a.ancestor:hover {
   color: #a2c2e2;
@@ -1203,6 +1150,71 @@ form fieldset table {
   margin-top: 0;
 }
 
+/* line 3, ../sass/_tables.sass */
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+/* line 6, ../sass/_tables.sass */
+th, td {
+  padding: 0.2em 0.5em;
+}
+
+/* line 9, ../sass/_tables.sass */
+td p {
+  margin: 0;
+}
+
+/* line 11, ../sass/_tables.sass */
+th {
+  text-align: left;
+}
+
+/* line 14, ../sass/_tables.sass */
+table.list {
+  border: 0;
+  margin: 1em 0;
+}
+/* line 17, ../sass/_tables.sass */
+table.list th {
+  background: #e4e4ef;
+}
+/* line 19, ../sass/_tables.sass */
+table.list tr, table.list th, table.list td {
+  border-bottom: 1px solid #e4e4ef;
+  color: inherit;
+  font-size: inherit;
+  margin: inherit;
+  padding: 0.5em 1em;
+  text-align: left;
+  vertical-align: middle;
+}
+/* line 27, ../sass/_tables.sass */
+table.list tr.odd, table.list tr.even {
+  background: inherit;
+}
+/* line 29, ../sass/_tables.sass */
+table.list td.checkbox {
+  padding: 0.2em;
+  text-align: center;
+  padding: inherit;
+}
+/* line 32, ../sass/_tables.sass */
+table.list td.checkbox input {
+  float: none;
+  margin-bottom: 0;
+  margin-top: 0;
+}
+/* line 37, ../sass/_tables.sass */
+table.list td.id {
+  text-align: left;
+}
+/* line 39, ../sass/_tables.sass */
+table.list th.subject {
+  padding-left: 20px;
+}
+
 /* line 6, ../sass/_tabs.sass */
 #content .tabs {
   background: #e1e1e3;
@@ -1352,23 +1364,7 @@ form fieldset table {
   margin-left: 1em;
 }
 
-/* line 1, ../sass/page_specific/_boards.sass */
-table.messages {
-  margin: 1em 0;
-}
-/* line 3, ../sass/page_specific/_boards.sass */
-table.messages th.subject {
-  padding-left: 20px;
-}
-/* line 5, ../sass/page_specific/_boards.sass */
-table.messages td {
-  color: inherit;
-  font-size: inherit;
-  margin: inherit;
-  text-align: left;
-  vertical-align: middle;
-}
-/* line 11, ../sass/page_specific/_boards.sass */
+/* line 2, ../sass/page_specific/_boards.sass */
 table.messages tr.message td.subject {
   background-position: 0 50%;
 }
@@ -1564,6 +1560,16 @@ form .attributes th {
 .action-issue_report .list th {
   text-align: center;
   text-transform: capitalize;
+}
+
+/* line 2, ../sass/page_specific/_repository.sass */
+table.changesets td.author,
+table.changesets td.committed_on {
+  text-align: inherit;
+}
+/* line 5, ../sass/page_specific/_repository.sass */
+table.changesets td.checkbox {
+  padding: 0;
 }
 
 /* line 2, ../sass/page_specific/_roles.sass */
