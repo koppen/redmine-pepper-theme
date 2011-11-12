@@ -156,7 +156,7 @@ p.subtitle {
 
 /* line 34, ../sass/_general_classes.sass */
 .splitcontentleft, .splitcontentright {
-  width: 48%;
+  width: 47%;
 }
 
 /* line 36, ../sass/_general_classes.sass */
@@ -1625,9 +1625,10 @@ table.entries td.checkbox {
 
   /* line 10, ../sass/responsive/_small_screens.sass */
   #top-menu #account {
-    display: none;
+    bottom: -2em;
+    position: absolute;
   }
-  /* line 12, ../sass/responsive/_small_screens.sass */
+  /* line 13, ../sass/responsive/_small_screens.sass */
   #top-menu ul {
     -moz-border-radius: 0;
     -webkit-border-radius: 0;
@@ -1641,18 +1642,18 @@ table.entries td.checkbox {
     box-shadow: none;
     width: 100%;
   }
-  /* line 16, ../sass/responsive/_small_screens.sass */
+  /* line 17, ../sass/responsive/_small_screens.sass */
   #top-menu ul li {
     width: 20%;
   }
-  /* line 18, ../sass/responsive/_small_screens.sass */
+  /* line 19, ../sass/responsive/_small_screens.sass */
   #top-menu ul li a {
     overflow: hidden;
     padding: 9px;
     text-align: center;
     text-overflow: ellipsis;
   }
-  /* line 23, ../sass/responsive/_small_screens.sass */
+  /* line 24, ../sass/responsive/_small_screens.sass */
   #top-menu ul li:first-child a {
     border-left: 0;
     -moz-border-radius: 0;
@@ -1662,7 +1663,7 @@ table.entries td.checkbox {
     -khtml-border-radius: 0;
     border-radius: 0;
   }
-  /* line 26, ../sass/responsive/_small_screens.sass */
+  /* line 27, ../sass/responsive/_small_screens.sass */
   #top-menu ul li:last-child a {
     border-right: 0;
     -moz-border-radius: 0;
@@ -1673,33 +1674,33 @@ table.entries td.checkbox {
     border-radius: 0;
   }
 
-  /* line 29, ../sass/responsive/_small_screens.sass */
+  /* line 30, ../sass/responsive/_small_screens.sass */
   #header {
     margin: 36px 0 18px 0;
   }
-  /* line 31, ../sass/responsive/_small_screens.sass */
+  /* line 32, ../sass/responsive/_small_screens.sass */
   #header h1 {
     margin: 9px;
   }
-  /* line 33, ../sass/responsive/_small_screens.sass */
+  /* line 34, ../sass/responsive/_small_screens.sass */
   #header .project_selector {
     margin-top: 9px;
   }
-  /* line 35, ../sass/responsive/_small_screens.sass */
+  /* line 36, ../sass/responsive/_small_screens.sass */
   #header #main-menu {
     margin: 0;
   }
-  /* line 37, ../sass/responsive/_small_screens.sass */
+  /* line 38, ../sass/responsive/_small_screens.sass */
   #header #quick-search {
     color: transparent;
     margin-right: 9px;
   }
-  /* line 40, ../sass/responsive/_small_screens.sass */
+  /* line 41, ../sass/responsive/_small_screens.sass */
   #header #quick-search a {
     display: none;
   }
 
-  /* line 42, ../sass/responsive/_small_screens.sass */
+  /* line 43, ../sass/responsive/_small_screens.sass */
   #main {
     border: 0;
     -moz-border-radius: 0;
@@ -1713,59 +1714,59 @@ table.entries td.checkbox {
     -o-box-shadow: none;
     box-shadow: none;
   }
-  /* line 46, ../sass/responsive/_small_screens.sass */
+  /* line 47, ../sass/responsive/_small_screens.sass */
   #main #content, #main.nosidebar #content {
     margin: 9px;
   }
-  /* line 49, ../sass/responsive/_small_screens.sass */
+  /* line 50, ../sass/responsive/_small_screens.sass */
   #main h2 {
     margin: 1em 0 9px 0;
   }
 
-  /* line 52, ../sass/responsive/_small_screens.sass */
+  /* line 53, ../sass/responsive/_small_screens.sass */
   .splitcontentleft, .splitcontentright {
     float: none;
     width: auto;
   }
 
-  /* line 55, ../sass/responsive/_small_screens.sass */
+  /* line 56, ../sass/responsive/_small_screens.sass */
   .box {
     padding: 9px;
   }
 
-  /* line 57, ../sass/responsive/_small_screens.sass */
+  /* line 58, ../sass/responsive/_small_screens.sass */
   .contextual {
     float: none;
     padding: 0;
     white-space: normal;
   }
 
-  /* line 63, ../sass/responsive/_small_screens.sass */
+  /* line 64, ../sass/responsive/_small_screens.sass */
   #content .tabs {
     height: auto;
     overflow: auto;
   }
-  /* line 66, ../sass/responsive/_small_screens.sass */
+  /* line 67, ../sass/responsive/_small_screens.sass */
   #content .tabs ul {
     width: auto;
     position: relative;
   }
 
-  /* line 69, ../sass/responsive/_small_screens.sass */
+  /* line 70, ../sass/responsive/_small_screens.sass */
   .tabs-buttons {
     display: block;
   }
 
-  /* line 74, ../sass/responsive/_small_screens.sass */
+  /* line 75, ../sass/responsive/_small_screens.sass */
   form em {
     margin-left: 0;
   }
 
-  /* line 77, ../sass/responsive/_small_screens.sass */
+  /* line 78, ../sass/responsive/_small_screens.sass */
   .tabular p {
     padding: 9px;
   }
-  /* line 79, ../sass/responsive/_small_screens.sass */
+  /* line 80, ../sass/responsive/_small_screens.sass */
   .tabular p label {
     display: block;
     float: none;
@@ -1773,32 +1774,32 @@ table.entries td.checkbox {
     text-align: left;
   }
 
-  /* line 85, ../sass/responsive/_small_screens.sass */
+  /* line 86, ../sass/responsive/_small_screens.sass */
   .tabular.settings p {
     padding: 9px;
   }
-  /* line 87, ../sass/responsive/_small_screens.sass */
+  /* line 88, ../sass/responsive/_small_screens.sass */
   .tabular.settings label {
     margin-left: 0;
   }
 
-  /* line 92, ../sass/responsive/_small_screens.sass */
+  /* line 93, ../sass/responsive/_small_screens.sass */
   .action-login #wrapper, .action-lost_password #wrapper {
     width: auto;
   }
-  /* line 94, ../sass/responsive/_small_screens.sass */
+  /* line 95, ../sass/responsive/_small_screens.sass */
   .action-login #top-menu, .action-lost_password #top-menu {
     margin-right: 9px;
   }
 
-  /* line 98, ../sass/responsive/_small_screens.sass */
+  /* line 99, ../sass/responsive/_small_screens.sass */
   #login-form table {
     background: none;
     border: none;
     margin: 18px 0 9px 0;
   }
 
-  /* line 105, ../sass/responsive/_small_screens.sass */
+  /* line 106, ../sass/responsive/_small_screens.sass */
   .controller-issues #content .contextual:first-child {
     display: none;
   }
