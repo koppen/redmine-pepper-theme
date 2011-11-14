@@ -1,0 +1,30 @@
+table
+  table.progress
+    background: $separator_color
+    +box-shadow(inset rgba(0,0,0,0.2) 1px 1px 1px)
+    +background($separator_color linear-gradient(top, darken($separator_color, 10%), $separator_color))
+    border: 0
+    +border-radius(1em)
+    display: block // Ensure border-radius can be applied
+    overflow: hidden // Clips the contents with the rounded corners
+    tbody, tr, td
+      display: block
+      padding: 0
+    tr
+      height: 1em
+      td
+        height: 1em
+      td.closed
+        background: $success_color
+        +background($success_color linear-gradient(top, lighten($success_color, 10%), $success_color))
+        +border-right-radius(1em)
+        border-bottom: 1px solid darken($success_color, 10%)
+        border-top: 1px solid lighten($success_color, 10%)
+        +box-shadow(rgba(0,0,0,0.2) 0 0 0.5em)
+        float: left
+      td.todo
+        // Ensure consistent sizing for progress bars with 0% progress
+        border-bottom: 1px solid transparent
+        border-top: 1px solid transparent
+
+        float: right
