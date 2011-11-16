@@ -1,10 +1,10 @@
 table
   table.progress
-    background: $separator_color
-    +box-shadow(inset rgba(0,0,0,0.2) 1px 1px 1px)
-    +background($separator_color linear-gradient(top, darken($separator_color, 10%), $separator_color))
+    background: $sidebar_color
+    +background($sidebar_color linear-gradient(top, darken($sidebar_color, 10%), $sidebar_color))
     border: 0
     +border-radius(1em)
+    +box-shadow(inset rgba(0,0,0,0.2) 1px 1px 1px)
     display: block // Ensure border-radius can be applied
     overflow: hidden // Clips the contents with the rounded corners
     tbody, tr, td
