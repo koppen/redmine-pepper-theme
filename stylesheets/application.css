@@ -49,7 +49,7 @@ li {
 /* line 34, ../sass/_general_elements.sass */
 h1, h2, h3 {
   border: none;
-  font-family: "Myriad Pro", arial, serif;
+  font-family: "Myriad Pro", arial, sans-serif;
   letter-spacing: -1px;
   padding: 0;
 }
