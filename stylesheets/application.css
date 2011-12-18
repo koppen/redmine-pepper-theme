@@ -1646,6 +1646,24 @@ form .attributes th {
   margin-top: 0;
 }
 
+/* line 82, ../sass/page_specific/_issues.sass */
+tr.changeset td.revision_graph {
+  background-color: inherit;
+  margin: 0;
+  padding: 0;
+  vertical-align: top;
+  width: auto;
+}
+/* line 88, ../sass/page_specific/_issues.sass */
+tr.changeset td.revision_graph .graph {
+  margin: 0.4em 0 0 0;
+  padding: 0;
+}
+/* line 91, ../sass/page_specific/_issues.sass */
+tr.changeset td.revision_graph .graph svg {
+  width: 100%;
+}
+
 /* line 4, ../sass/page_specific/_reports.sass */
 .action-issue_report .list th {
   text-align: center;
