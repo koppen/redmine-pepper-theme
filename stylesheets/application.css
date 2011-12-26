@@ -1697,6 +1697,11 @@ table .priority-10 {
   color: #cc3333;
 }
 
+/* line 121, ../sass/page_specific/_issues.sass */
+.assigned-to-me {
+  font-weight: bold;
+}
+
 /* line 4, ../sass/page_specific/_reports.sass */
 .action-issue_report .list th {
   text-align: center;
