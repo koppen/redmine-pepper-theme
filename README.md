@@ -42,7 +42,7 @@ or you can download the theme archive from https://github.com/koppen/redmine-pep
 Modifying
 ---------
 
-The source of the theme is in [Sass](http://sass-lang.com) format, and you need [Ruby](http://ruby-lang.org), [Sass](http://sass-lang.com), and [Compass](http://compass-style.org).
+The source of the theme is in [Sass](http://sass-lang.com) format, and you need [Ruby](http://ruby-lang.org), [Sass](http://sass-lang.com) (>= 3.1), and [Compass](http://compass-style.org) (>= 0.11).
 
 To build the final CSS:
 
