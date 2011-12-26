@@ -1266,10 +1266,6 @@ table.list th, table.list td {
   text-align: left;
   vertical-align: middle;
 }
-/* line 27, ../sass/_tables.sass */
-table.list tr.odd, table.list tr.even {
-  background: inherit;
-}
 /* line 29, ../sass/_tables.sass */
 table.list td.checkbox {
   padding: 0.2em;
@@ -1639,6 +1635,66 @@ form .attributes th {
 /* line 77, ../sass/page_specific/_issues.sass */
 #update h3 {
   margin-top: 0;
+}
+
+/* line 81, ../sass/page_specific/_issues.sass */
+table .priority-1 {
+  background: white;
+  color: #333333;
+}
+
+/* line 85, ../sass/page_specific/_issues.sass */
+table .priority-2 {
+  background: #fff8f8;
+  color: #443333;
+}
+
+/* line 89, ../sass/page_specific/_issues.sass */
+table .priority-3 {
+  background: #fff4f4;
+  color: #553333;
+}
+
+/* line 93, ../sass/page_specific/_issues.sass */
+table .priority-4 {
+  background: #fff0f0;
+  color: #663333;
+}
+
+/* line 97, ../sass/page_specific/_issues.sass */
+table .priority-5 {
+  background: #ffebeb;
+  color: #773333;
+}
+
+/* line 101, ../sass/page_specific/_issues.sass */
+table .priority-6 {
+  background: #ffe8e8;
+  color: #883333;
+}
+
+/* line 105, ../sass/page_specific/_issues.sass */
+table .priority-7 {
+  background: #ffe4e4;
+  color: #993333;
+}
+
+/* line 109, ../sass/page_specific/_issues.sass */
+table .priority-8 {
+  background: #ffe0e0;
+  color: #aa3333;
+}
+
+/* line 113, ../sass/page_specific/_issues.sass */
+table .priority-9 {
+  background: #ffdbdb;
+  color: #bb3333;
+}
+
+/* line 117, ../sass/page_specific/_issues.sass */
+table .priority-10 {
+  background: #ffd8d8;
+  color: #cc3333;
 }
 
 /* line 4, ../sass/page_specific/_reports.sass */
