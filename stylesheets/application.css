@@ -1227,12 +1227,12 @@ form fieldset table {
   margin-top: 0;
 }
 
-/* line 2, ../sass/_sidebar.sass */
-#sidebar a {
+/* line 3, ../sass/_sidebar.sass */
+#sidebar li a {
   display: block;
 }
-/* line 4, ../sass/_sidebar.sass */
-#sidebar a.selected {
+/* line 5, ../sass/_sidebar.sass */
+#sidebar li a.selected {
   background-color: #666666;
   -moz-border-radius: 1em;
   -webkit-border-radius: 1em;
