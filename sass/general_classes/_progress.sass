@@ -1,34 +1,39 @@
-table
-  table.progress
-    background: $sidebar_color
-    +background($sidebar_color linear-gradient(top, darken($sidebar_color, 10%), $sidebar_color))
-    border: 0
-    +border-radius(1em)
-    +box-shadow(inset rgba(0,0,0,0.2) 1px 1px 1px)
-    display: block // Ensure border-radius can be applied
-    overflow: hidden // Clips the contents with the rounded corners
-    tbody, tr, td
-      display: block
-      padding: 0
-    tr
+table.progress
+  background: $sidebar_color
+  +background($sidebar_color linear-gradient(top, darken($sidebar_color, 10%), $sidebar_color))
+  border: 0
+  +border-radius(1em)
+  +box-shadow(inset rgba(0,0,0,0.2) 1px 1px 1px)
+  display: block // Ensure border-radius can be applied
+  overflow: hidden // Clips the contents with the rounded corners
+  tbody, tr, td
+    display: block
+    padding: 0
+  tr
+    height: 1em
+    &:hover
+      background: inherit
+    td
       height: 1em
-      &:hover
-        background: inherit
-      td
-        height: 1em
-      td.closed
-        background: $success_color
-        +background($success_color linear-gradient(top, lighten($success_color, 10%), $success_color))
-        +border-right-radius(0)
-        border-bottom: 1px solid darken($success_color, 10%)
-        border-top: 1px solid lighten($success_color, 10%)
-        +box-shadow(rgba(0,0,0,0.2) 0 0 0.5em)
-        float: left
-      td.todo
-        background: transparent
+    td.closed
+      background: $success_color
+      +background($success_color linear-gradient(top, lighten($success_color, 10%), $success_color))
+      +border-right-radius(0)
+      border-bottom: 1px solid darken($success_color, 10%)
+      border-top: 1px solid lighten($success_color, 10%)
+      +box-shadow(rgba(0,0,0,0.2) 0 0 0.5em)
+      float: left
+    td.todo
+      background: transparent
 
-        // Ensure consistent sizing for progress bars with 0% progress
-        border-bottom: 1px solid transparent
-        border-top: 1px solid transparent
+      // Ensure consistent sizing for progress bars with 0% progress
+      border-bottom: 1px solid transparent
+      border-top: 1px solid transparent
 
-        float: right
+      float: right
+
+// Ensure proper padding in progress bars inside the issues list table
+.issues
+  table.progress
+    tbody, tr, td
+      padding: 0

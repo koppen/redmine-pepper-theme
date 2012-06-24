@@ -194,8 +194,8 @@ p.subtitle {
   box-shadow: rgba(0, 0, 0, 0.5) 0 0 2em;
 }
 
-/* line 2, ../sass/general_classes/_progress.sass */
-table table.progress {
+/* line 1, ../sass/general_classes/_progress.sass */
+table.progress {
   background: #efefef;
   background: #efefef url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjUwJSIgeTE9IjAlIiB4Mj0iNTAlIiB5Mj0iMTAwJSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2Q1ZDVkNSIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iI2VmZWZlZiIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==');
   background: #efefef -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #d5d5d5), color-stop(100%, #efefef));
@@ -218,25 +218,25 @@ table table.progress {
   display: block;
   overflow: hidden;
 }
-/* line 10, ../sass/general_classes/_progress.sass */
-table table.progress tbody, table table.progress tr, table table.progress td {
+/* line 9, ../sass/general_classes/_progress.sass */
+table.progress tbody, table.progress tr, table.progress td {
   display: block;
   padding: 0;
 }
-/* line 13, ../sass/general_classes/_progress.sass */
-table table.progress tr {
+/* line 12, ../sass/general_classes/_progress.sass */
+table.progress tr {
   height: 1em;
 }
-/* line 15, ../sass/general_classes/_progress.sass */
-table table.progress tr:hover {
+/* line 14, ../sass/general_classes/_progress.sass */
+table.progress tr:hover {
   background: inherit;
 }
-/* line 17, ../sass/general_classes/_progress.sass */
-table table.progress tr td {
+/* line 16, ../sass/general_classes/_progress.sass */
+table.progress tr td {
   height: 1em;
 }
-/* line 19, ../sass/general_classes/_progress.sass */
-table table.progress tr td.closed {
+/* line 18, ../sass/general_classes/_progress.sass */
+table.progress tr td.closed {
   background: #339933;
   background: #339933 url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjUwJSIgeTE9IjAlIiB4Mj0iNTAlIiB5Mj0iMTAwJSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzQwYmY0MCIvPjxzdG9wIG9mZnNldD0iMTAwJSIgc3RvcC1jb2xvcj0iIzMzOTkzMyIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JhZCkiIC8+PC9zdmc+IA==');
   background: #339933 -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #40bf40), color-stop(100%, #339933));
@@ -265,12 +265,17 @@ table table.progress tr td.closed {
   box-shadow: rgba(0, 0, 0, 0.2) 0 0 0.5em;
   float: left;
 }
-/* line 27, ../sass/general_classes/_progress.sass */
-table table.progress tr td.todo {
+/* line 26, ../sass/general_classes/_progress.sass */
+table.progress tr td.todo {
   background: transparent;
   border-bottom: 1px solid transparent;
   border-top: 1px solid transparent;
   float: right;
+}
+
+/* line 38, ../sass/general_classes/_progress.sass */
+.issues table.progress tbody, .issues table.progress tr, .issues table.progress td {
+  padding: 0;
 }
 
 /* line 41, ../sass/_layout.sass */
