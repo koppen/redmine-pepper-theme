@@ -23,6 +23,15 @@ table.progress
       border-top: 1px solid lighten($success_color, 10%)
       +box-shadow(rgba(0,0,0,0.2) 0 0 0.5em)
       float: left
+    td.done
+      $_closed_color: lighten(desaturate($success_color, 25%), 25%)
+      background: $_closed_color
+      +background($_closed_color linear-gradient(top, lighten($_closed_color, 10%), $_closed_color))
+      +border-right-radius(0)
+      border-bottom: 1px solid darken($_closed_color, 10%)
+      border-top: 1px solid lighten($_closed_color, 10%)
+      +box-shadow(rgba(0,0,0,0.2) 0 0 0.5em)
+      float: left
     td.todo
       background: transparent
 
