@@ -1789,6 +1789,15 @@ table.entries td.checkbox {
   margin-top: 3px;
 }
 
+/* line 3, ../sass/page_specific/_settings.sass */
+.versions tr.version td.name {
+  padding: 0.5em 1em;
+}
+/* line 5, ../sass/page_specific/_settings.sass */
+.versions tr.version td {
+  text-align: left;
+}
+
 /* line 1, ../sass/page_specific/_wiki.sass */
 .wiki h1 {
   border: 0;
