@@ -5,8 +5,6 @@ You develop great software. You use Redmine to manage your projects. Your Redmin
 
 Pepper is a Redmine theme that looks professional, generic enough to be usable by most organizations, while not becoming bland or boring - fitting for any high tech software company.
 
-It has been tested with [Redmine](http://redmine.org) 1.2, and should work fine with [Chili Project](http://chiliproject.org) as well.
-
 
 Features
 --------
@@ -26,6 +24,14 @@ While Pepper has been designed for modern browsers, thus looks its best in Chrom
 * Firefox 5
 * Internet Explorer 9
 * Safari 5
+
+
+Compatibility
+-------------
+
+Pepper is made for [Redmine](http://redmine.org) 2.1, but could work fine with [Chili Project](http://chiliproject.org) as well - this is untested, however.
+
+If you need support for Redmin versions older than 2.1, download a release for your version at https://github.com/koppen/redmine-pepper-theme/tags.
 
 
 Installing
