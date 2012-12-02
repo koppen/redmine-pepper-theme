@@ -62,7 +62,7 @@ ProjectMenuBuilder = {
   },
 
   getProjects: function(element) {
-    var projectOptions = $('option[value!=""]');
+    var projectOptions = $('#project_quick_jump_box option[value!=""]');
     return projectOptions.map(function(index, node) {
       node = $(node);
       return {
