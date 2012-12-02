@@ -1,20 +1,20 @@
 function injectViewportMetaTag() {
-  var meta = $(document.createElement('meta'));
+  var meta = document.createElement('meta');
   meta.name = 'viewport';
   meta.content = 'width=450';
-  $$('head')[0].insert(meta);
+  $('head').append(meta);
 };
 
 ProjectMenuBuilder = {
   buildMenuItem: function(project) {
     var link = $(document.createElement('a'));
-    link.href = project.url;
-    link.innerHTML = project.name;
+    link.attr('href', project.url);
+    link.html(project.name);
     if (project.selected) {
-      link.addClassName('selected');
+      $(link).addClass('selected');
     };
     var li = $(document.createElement('li'));
-    li.appendChild(link);
+    li.append(link);
 
     return li;
   },
@@ -22,11 +22,11 @@ ProjectMenuBuilder = {
   buildList: function(projectSelector) {
     var projects = ProjectMenuBuilder.getProjects(projectSelector);
     var projectList = $(document.createElement('ul'));
-    projectList.addClassName('projects');
-    projectList.setStyle({ display: 'none' });
+    projectList.addClass('projects');
+    projectList.css('display', 'none');
 
-    projects.each(function(project, index) {
-      projectList.appendChild(ProjectMenuBuilder.buildMenuItem(project));
+    projects.each(function(index, project) {
+      projectList.append(ProjectMenuBuilder.buildMenuItem(project));
     });
 
     return projectList;
@@ -34,81 +34,87 @@ ProjectMenuBuilder = {
 
   buildProjectSelector: function(selectElement) {
     var selector = $(document.createElement('div'));
-    selector.addClassName('project_selector');
+    selector.addClass('project_selector');
 
     var title = ProjectMenuBuilder.getTitle(selectElement);
-    selector.appendChild(ProjectMenuBuilder.buildToggle(title));
+    var toggle = ProjectMenuBuilder.buildToggle(title);
+    selector.append(toggle);
 
     var projectList = ProjectMenuBuilder.buildList(selectElement);
-    selector.appendChild(projectList);
+    selector.append(projectList);
 
     return selector;
   },
 
   buildToggle: function(title) {
     var toggle = $(document.createElement('a'));
-    toggle.href = '#'; // Makes it behave like a real link
-    toggle.addClassName('toggle');
-    toggle.title = title;
-    toggle.innerHTML = toggle.title.replace('...', '&hellip;');
-
+    toggle.addClass('toggle');
+    toggle.attr('href', '#'); // Makes it behave like a real link
+    toggle.attr('title', title);
+    toggle.html(title.replace('...', '&hellip;'));
     return toggle;
   },
-  
+
   getProjects: function(element) {
-    var projectOptions = element.getElementsBySelector('option[value!=""]');
-    return projectOptions.collect(function(node) {
+    var projectOptions = $('option[value!=""]');
+    return projectOptions.map(function(index, node) {
+      node = $(node);
       return {
-        url: node.value,
-        name: node.innerHTML,
-        selected: node.readAttribute('selected') == 'selected'
+        url: node.val(),
+        name: node.html(),
+        selected: node.attr('selected', 'selected')
       };
     });
   },
-  
+
   getTitle: function(element) {
-    var title = element.childElements().first().innerHTML;
+    var title = element.children().html();
     return title;
+  },
+
+  projectsNode: function() {
+    return $('.project_selector .projects');
+  },
+
+  toggleNode: function() {
+    return $('.project_selector .toggle');
   },
 
   // Hook up events
   bindEvents: function(selector) {
-    selector.toggleProjects = function() {
-      if ($(this).down('.projects').visible()) {
-        this.hideProjects();
+    selector.toggleProjects = function(event) {
+      if ($('.project_selector .projects:visible').length > 0) {
+        this.hideProjects(event);
       } else {
-        this.showProjects();
+        this.showProjects(event);
       };
     };
 
-    selector.hideProjects = function() {
-      $(this).down('.projects').hide();
-      $(this).down('.toggle').removeClassName('active');
+    selector.hideProjects = function(event) {
+      ProjectMenuBuilder.projectsNode().hide();
+      ProjectMenuBuilder.toggleNode().removeClass('active');
     };
 
-    selector.showProjects = function() {
-      $(this).down('.projects').show();
-      $(this).down('.toggle').addClassName('active');
+    selector.showProjects = function(event) {
+      ProjectMenuBuilder.projectsNode().show();
+      ProjectMenuBuilder.toggleNode().addClass('active');
     };
 
     // Display the project dropdown when the toggle is clicked
-    selector.down('.toggle').observe('click', function(event) {
-      selector.toggleProjects();
-      event.stop();
+    selector.find('.toggle').click(function(event) {
+      selector.toggleProjects(event);
+      event.preventDefault();
     });
 
     // Hide the dropdown again a short while after we've moved the mouse away
-    selector.observe('mouseout', function(event) {
-      selector.toggleTimer = new PeriodicalExecuter(function(pe) {
-        selector.hideProjects();
-        pe.stop();
-      }, 1);
+    selector.mouseout(function(event) {
+      selector.toggleTimer = setTimeout(selector.hideProjects, 500);
     });
 
     // Cancel the timer to hide the dropdown if we move the mouse back over the menu
-    selector.observe('mouseover', function(event) {
+    selector.mouseover(function(event) {
       if (selector.toggleTimer) {
-        selector.toggleTimer.stop();
+        clearTimeout(selector.toggleTimer);
       };
     });
   },
@@ -123,18 +129,17 @@ ProjectMenuBuilder = {
     ProjectMenuBuilder.bindEvents(selector);
 
     // Insert the project selector after the project name
-    projectName.insert({ after: selector });
+    selector.insertAfter(projectName);
 
     // Remove the original select list
     projectSelector.hide();
   }
 };
 
-document.observe("dom:loaded", function() {
+$(document).ready(function() {
   ProjectMenuBuilder.moveProjectSelectorToProjectName(
-    $$('#quick-search select').first(),
-    $$('#header h1').first()
+    $('#quick-search select'),
+    $('#header h1')
   );
   injectViewportMetaTag();
 });
-
