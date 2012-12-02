@@ -21,29 +21,35 @@ ProjectMenuBuilder = {
 
   buildList: function(projectSelector) {
     var projects = ProjectMenuBuilder.getProjects(projectSelector);
-    var projectList = $(document.createElement('ul'));
-    projectList.addClass('projects');
-    projectList.css('display', 'none');
+    if (projects.length == 0) {
+      return;
+    } else {
+      var projectList = $(document.createElement('ul'));
+      projectList.addClass('projects');
+      projectList.css('display', 'none');
 
-    projects.each(function(index, project) {
-      projectList.append(ProjectMenuBuilder.buildMenuItem(project));
-    });
+      projects.each(function(index, project) {
+        projectList.append(ProjectMenuBuilder.buildMenuItem(project));
+      });
 
-    return projectList;
+      return projectList;
+    };
   },
 
   buildProjectSelector: function(selectElement) {
-    var selector = $(document.createElement('div'));
-    selector.addClass('project_selector');
-
-    var title = ProjectMenuBuilder.getTitle(selectElement);
-    var toggle = ProjectMenuBuilder.buildToggle(title);
-    selector.append(toggle);
-
     var projectList = ProjectMenuBuilder.buildList(selectElement);
-    selector.append(projectList);
+    if (projectList) {
+      var selector = $(document.createElement('div'));
+      selector.addClass('project_selector');
 
-    return selector;
+      var title = ProjectMenuBuilder.getTitle(selectElement);
+      var toggle = ProjectMenuBuilder.buildToggle(title);
+      selector.append(toggle);
+
+      selector.append(projectList);
+
+      return selector;
+    };
   },
 
   buildToggle: function(title) {
@@ -82,6 +88,8 @@ ProjectMenuBuilder = {
 
   // Hook up events
   bindEvents: function(selector) {
+    if (!selector) { return };
+
     selector.toggleProjects = function(event) {
       if ($('.project_selector .projects:visible').length > 0) {
         this.hideProjects(event);
@@ -126,13 +134,15 @@ ProjectMenuBuilder = {
     }
 
     var selector = ProjectMenuBuilder.buildProjectSelector(projectSelector);
-    ProjectMenuBuilder.bindEvents(selector);
+    if (selector) {
+      ProjectMenuBuilder.bindEvents(selector);
 
-    // Insert the project selector after the project name
-    selector.insertAfter(projectName);
+      // Insert the project selector after the project name
+      selector.insertAfter(projectName);
 
-    // Remove the original select list
-    projectSelector.hide();
+      // Remove the original select list
+      projectSelector.hide();
+    };
   }
 };
 
