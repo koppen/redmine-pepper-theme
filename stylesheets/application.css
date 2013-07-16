@@ -210,7 +210,7 @@ form fieldset table { margin-top: 0; }
 .splitcontentleft fieldset legend, .splitcontentright fieldset legend { margin-top: 0; }
 
 #sidebar li a { display: block; }
-#sidebar li a.selected { background-color: #666666; -moz-border-radius: 1em; -webkit-border-radius: 1em; -o-border-radius: 1em; -ms-border-radius: 1em; -khtml-border-radius: 1em; border-radius: 1em; padding-left: 1em; text-decoration: none; }
+#sidebar li a.selected { background-color: #e4e4ef; color: #333333; -moz-border-radius: 1em; -webkit-border-radius: 1em; -o-border-radius: 1em; -ms-border-radius: 1em; -khtml-border-radius: 1em; border-radius: 1em; padding-left: 1em; text-decoration: none; }
 
 table { border-collapse: collapse; width: 100%; }
 
