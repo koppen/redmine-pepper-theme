@@ -204,6 +204,8 @@ form table td input { clear: left; float: left; margin-right: 1em; }
 form table table { margin: 0; }
 form fieldset table { margin-top: 0; }
 
+#users_for_watcher label { text-align: left; }
+
 #filters table { margin: 0; }
 
 .splitcontentleft fieldset, .splitcontentright fieldset { margin: 0 0 18px 0; }
