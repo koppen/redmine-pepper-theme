@@ -40,7 +40,7 @@ Installing
 Using git, you can simply clone the theme into your Redmine theme directory like so:
 
     $ cd /path/to/redmine/public/themes
-    $ git clone http://github.com/koppen/redmine-pepper-theme.git pepper
+    $ git clone https://github.com/koppen/redmine-pepper-theme.git pepper
 
 or you can download the theme archive from https://github.com/koppen/redmine-pepper-theme/tarball/master and follow the instructions at http://www.redmine.org/projects/redmine/wiki/Themes to install it.
 
