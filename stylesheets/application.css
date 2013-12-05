@@ -153,6 +153,7 @@ form input { margin: 2px 0; max-width: 80%; }
 form input[type=checkbox] { margin: 6px 0.25em 6px 0; }
 form input[type=password], form input[type=text], form textarea { border: 1px solid #888888; -moz-border-radius: 2px; -webkit-border-radius: 2px; -o-border-radius: 2px; -ms-border-radius: 2px; -khtml-border-radius: 2px; border-radius: 2px; -moz-box-shadow: inset rgba(0, 0, 0, 0.2) 1px 1px 2px; -webkit-box-shadow: inset rgba(0, 0, 0, 0.2) 1px 1px 2px; -o-box-shadow: inset rgba(0, 0, 0, 0.2) 1px 1px 2px; box-shadow: inset rgba(0, 0, 0, 0.2) 1px 1px 2px; padding: 4px; }
 form input[type=password]:focus, form input[type=password]:hover, form input[type=text]:focus, form input[type=text]:hover, form textarea:focus, form textarea:hover { border-color: #a2c2e2; }
+form input.autocomplete { padding-left: 20px; }
 form select { margin: 5px 0; max-width: 99%; }
 form input[type=submit] { cursor: pointer; margin: 9px 1em 9px 0; padding: 9px 18px; }
 form input[type=submit]:focus, form input[type=submit]:hover { -moz-box-shadow: #a2c2e2 0 0 9px; -webkit-box-shadow: #a2c2e2 0 0 9px; -o-box-shadow: #a2c2e2 0 0 9px; box-shadow: #a2c2e2 0 0 9px; }
