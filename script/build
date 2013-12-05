@@ -1,1 +1,1 @@
-compass compile --force
+compass compile --force --time --output-style=compact --no-line-comments
