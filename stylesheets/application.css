@@ -148,7 +148,6 @@ table.progress tr td.todo { background: transparent; border-bottom: 1px solid tr
 
 form em { display: block; font-size: 0.8em; font-style: normal; }
 form p { margin: 9px 0; overflow: hidden; }
-form p br { display: none; }
 form input { margin: 2px 0; max-width: 80%; }
 form input[type=checkbox] { margin: 6px 0.25em 6px 0; }
 form input[type=password], form input[type=text], form textarea { border: 1px solid #888888; -moz-border-radius: 2px; -webkit-border-radius: 2px; -o-border-radius: 2px; -ms-border-radius: 2px; -khtml-border-radius: 2px; border-radius: 2px; -moz-box-shadow: inset rgba(0, 0, 0, 0.2) 1px 1px 2px; -webkit-box-shadow: inset rgba(0, 0, 0, 0.2) 1px 1px 2px; -o-box-shadow: inset rgba(0, 0, 0, 0.2) 1px 1px 2px; box-shadow: inset rgba(0, 0, 0, 0.2) 1px 1px 2px; padding: 4px; }
