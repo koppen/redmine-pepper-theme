@@ -1,13 +1,23 @@
 #sidebar
+  > *
+    position: relative
+    left: $spacing
+  h3
+    border-bottom: 1px solid ($text_color * 4)
+  .contextual
+    margin-right: ($spacing * 2)
   li
     a
-      display: block
       &.selected
         background-color: $separator_color
         color: $text_color
         +border-radius(2px)
-        padding-left: 1em
         text-decoration: none
-    label
-      a
-        display: inline
+  label
+    clear: both
+    font-weight: normal
+    width: auto
+    a
+      display: inline
+  img
+    vertical-align: text-bottom

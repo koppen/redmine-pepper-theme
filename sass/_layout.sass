@@ -196,26 +196,17 @@
   #content
     background: #ffffff
     border: 0 // Override Redmine default
-    margin: $spacing ($sidebar_width + $spacing * 3) $spacing $spacing
+    padding-top: ($spacing / 2)
     min-height: 21em // Keep it roughly higher than the sidebar on the Activity page
-    padding: 0
-    width: auto
   #sidebar
     background: #ffffff url('../images/sidebar_separator.png') no-repeat 0 100%
     +background(url('../images/sidebar_separator.png') 0 100% no-repeat, linear-gradient(center top, $sidebar_color 50%, #ffffff) repeat scroll 0 0 transparent)
     +border-radius(0 0 $outside_border_radius 0)
     float: right
-    padding: $spacing
     padding-bottom: $spacing * 4
-    width: $sidebar_width
-    h3:first-child
-      color: $text_color
-      font-size: 1.4em
-      margin-top: 0.45em
-    label
-      clear: both
-      font-weight: normal
-      width: auto
+    width: 23%
+    position: relative
+
   &.nosidebar
     #content
       margin-right: $spacing
