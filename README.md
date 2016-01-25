@@ -52,7 +52,7 @@ The source of the theme is in [Sass](http://sass-lang.com) format, and you need 
 
 To build the final CSS:
 
-    $ compass compile
+    $ ./script/build
 
 Never edit stylesheets/application.css as it will be overwritten by Compass.
 
